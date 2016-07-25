@@ -1,0 +1,17 @@
+# Site settings
+title: Vivek Yadav's blog
+email: 
+description: "A data science and machine learning enthusiast's blog for a data science and machine learning enthusiast."
+baseurl: ""
+url: "http://vxy10.github.io"
+github_username:  vxy10
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+
+highlighter: rouge
+kramdown:
+  input: GFM
+  auto_ids: true
+  syntax_highlighter: rouge
