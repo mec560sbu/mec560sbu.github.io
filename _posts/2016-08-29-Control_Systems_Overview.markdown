@@ -26,6 +26,6 @@ For example, consider the example of maintining the speed of the car using cruis
 
 
 <figure>
-  <img src="images/Overview.png",width=600, height=200)>
+  <img src="/images/Overview.png",width=600, height=200)>
   <figcaption> Fig1. - Schematic of a typical control system</figcaption>
 </figure>
