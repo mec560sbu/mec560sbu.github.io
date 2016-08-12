@@ -1,7 +1,7 @@
 # Site settings
-title: Vivek Yadav's blog
+title: MEC 560's home page
 email: 
-description: "A data science and machine learning enthusiast's blog for a data science and machine learning enthusiast."
+description: "Course material for MEC 560: Advanced Control Systems taught at Stony Brook University by Dr. Vivek Yadav"
 baseurl: ""
 url: "http://vxy10.github.io"
 github_username:  vxy10

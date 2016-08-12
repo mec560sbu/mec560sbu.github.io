@@ -1,0 +1,37 @@
+---
+layout: post
+comments: true
+title:  "Control systems overview"
+excerpt: "Introduction to control systems design and the scope of MEC 560."
+date:   2016-08-29 11:00:00
+mathjax: true
+---
+
+
+
+###### Vivek Yadav
+
+
+A control system is a device, or set of devices, that manages, commands, directs or regulates the behaviour of other devices or systems. Industrial control systems are used in industrial production for controlling equipment or machines. From [wikipedia](https://en.wikipedia.org/wiki/Control_system). This definition although accurate is not detailed. In this couse, we will develop a more detailed understanding of what control system is, and challenged associated with designing an real-world ready controller. 
+
+For example, consider the example of maintining the speed of the car using cruise control. This typically involves 'measuring' the speed of the car, computing throttle opening/closing based on deviation from the desired speed,  and applying this control signal to the car's throttle. This process can be better understood by separating the involved concepts into 4 parts, plant, measurement and estimation, control law and actuation. These are discussed in more detail below, 
+
+1. **Plant**: Plant is the physical system that we want to behave in a certain manner. Plant is the system that we interact with using control signals applied via actuators and whose state we monitor using estimates derived from sensors measurements. We define states of a system as the variables that specify the system. In our example, position, orientation and their velocities form the states of the car. Note, the constants required to accurately describe the system are called parameters, for example mass of the car, wheel diameter, throttle bandwidth, etc. The states of a system are not unique. 
+
+2. **Observer (Measurements and estimation)**: Observers are used to convert measurements into state estimates. In our example, to precisely control the speed of the car, we first need to get the speed of the car relative to the ground. However, the speed of the car is not directly measured. Speed is typically estimated by measuring the rotational speed of the drive shaft, and using a calibration table to convert the drive shaft's rotational speed to the speed of the car. This technique is prone to errors due to sensor noise, differential wear of tires, road conditions, etc. The observer design deals with how to best estimate the ground speed of the car given the measurements of the rotational speed of the drive shaft. Where as estimation deals with how to best estimate the speed of the car from the position of the car. Estimates can futher be improved by combining measurements from multiple sensors. For example, most modern cars are equipped with a GPS, therefore estimates of speed can be improved by combining data from GPS and drive shaft. This process is also refered to as sensor fusion. Kalman filters are often used for sensor fusion. 
+
+3. ** Actuation **:  Actuators are devices that interact with a plant and change its inherent states. States are defined as variables that are required to uniquely define what the plant is doing. For example, for a car, the states are location on the road, heading, rate of change of location on the road and rate of change of heading. In our cruise control example, throttle is the actuator whose opening is adusted to vary the speed of the car. Consider a simple control law where we compute the difference between the desired and estimated speed as command to the throttle. Therefore, if desired speed is lower than the estimated speed, the difference is positive and throttle is asked to open. If the desired speed is lower than the estimated speed, the difference is negative and the throttle is asked to let lesser fuel in. However, there are physical limitations on how much the throttle can open or close. The throttle opening cannot be more than the diameter of the inlet fuel line and closing cannot be lower than 0. These constraints also called 'actuator constraints' dictate how we may interact with a system. Further, any actuation system cannot directly apply the commanded control, and there is a lag in response. This lag is response is also called 'actuator dynamics'. Actuator dynamics are difficult to estimate as they depend on multiple factors, they are usually modeled as a first order decay system. 
+
+4. ** Control law** : Control law is the law that governs how the estimates are converted to signals to be sent to the actuators. One way to obtain control signal is to compute the difference between the desired and actual states of the system and scaling them up by appropriate gain factors (refered to as proportional, integral or derivative or PID control). The resulting control signal is sent to the actuator. It is important to have an actuator with large bandwidth because a less responsive actuator can severely affect the performance of the controller. Note, bandwidth is the frequency at which the corresponding frequency response has an amplitude of -3dB and phase difference of 180. Also, bandwidth is related to time constant via $f_{3dB} = \frac{1}{2 \pi \tau}$. Therefore, larger bandwidth implies smaller time constant and thus faster response. Systems in which the control is based on all the states of the system is called full state feedback. However, it is not always possible to have full state feedback, for example, in cruise control example, we are not interested in actual position of the car, only the velocity. As we will learn later, PID control can be achieved by using infinitely many combinations of the underlying gains. However, most PID control systems do not explicitly account for system dynamics, therefore, are not efficient. An efficient controller can be synthesized using a detailed model of the system. The field of control theory that deals with designing such optimal control laws is called optimal control theory. Optimal control laws explicitely consider the system dynamics and give control law that best minimizes some cost objective that typically weighs deviation from the desired states and the involved control effort. However, such models are prone to errors due to inaccurate estimation of system dynamics and its corresponding parameters. For example, the mathematical model describing an airplane has drag coefficients, and these coefficients vary with wind conditions. Further, mass or inertia of the airplane may change due to payload, cargo load or other factors. As evident, control laws are susceptible to errors due to errors in estimating model parameters, inaccurate/incomplete system dynamics model, sensor and actuation noise, actuator contraints and actuator dynamics. The field of control theory that deals with synthesizing controllers for systems operating under uncertain conditions is robust control.
+
+
+<figure>
+  <img src="figs/Overview.png",width=600, height=200)>
+  <figcaption> Fig1. - Schematic of a typical control system</figcaption>
+</figure>
+
+
+
+```python
+
+```
