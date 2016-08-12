@@ -18,9 +18,10 @@ State-space analysis methods and multi-variable controller design, as well as an
 
 | Week #  | Date     | Description | Course links |
 | :---------: | :------------: | :--------------------------------------: | :--------: | 
-|   Week 1   |      8/29/2016    |    Linear algebra review: Vectors and matrices, norms, eigen values, SVD  | [Linear algebra](google.com),[Linear algebra](google.com),[Linear algebra](google.com),[Linear algebra](google.com),                 | 
-| Week 2      |        9/4/2016   |  Labor day, NO CLASS                      |    ----           |
-| Week 3      |                         |                        |                  |
+|   Lecture   |      8/29/2016    |    Linear algebra review: Vectors and matrices, norms, eigen values, SVD  | [Linear algebra](google.com),[Linear algebra](google.com),[Linear algebra](google.com),[Linear algebra](google.com),                 | 
+| Holiday    |        9/4/2016   |  Labor day, NO CLASS                      |    ----           |
+|   Lecture   |      8/29/2016    |    Linear algebra review: Vectors and matrices, norms, eigen values, SVD  | [Linear algebra](google.com),[Linear algebra](google.com),[Linear algebra](google.com),[Linear algebra](google.com),                 | 
+|   Lecture   |      8/29/2016    |    Linear algebra review: Vectors and matrices, norms, eigen values, SVD  | [Linear algebra](google.com),[Linear algebra](google.com),[Linear algebra](google.com),[Linear algebra](google.com),                 | 
 
 
 
