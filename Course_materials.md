@@ -16,12 +16,12 @@ State-space analysis methods and multi-variable controller design, as well as an
 
 #### Course layout
 
-| Week #  | Date     | Description | Course links |
-| :---------: | :------------: | :--------------------------------------: | :--------: | 
-|   Lecture   |      8/29/2016    |    Linear algebra review: Vectors and matrices, norms, eigen values, SVD  | [Linear algebra](google.com),[Linear algebra](google.com),[Linear algebra](google.com),[Linear algebra](google.com),                 | 
-| Holiday    |        9/4/2016   |  Labor day, NO CLASS                      |    ----           |
-|   Lecture   |      8/29/2016    |    Linear algebra review: Vectors and matrices, norms, eigen values, SVD  | [Linear algebra](google.com),[Linear algebra](google.com),[Linear algebra](google.com),[Linear algebra](google.com),                 | 
-|   Lecture   |      8/29/2016    |    Linear algebra review: Vectors and matrices, norms, eigen values, SVD  | [Linear algebra](google.com),[Linear algebra](google.com),[Linear algebra](google.com),[Linear algebra](google.com),                 | 
+| Date     | Description | Course links |
+| :----------: | :--------------------------------------: | :--------: | 
+|       8/29/2016    |    Linear algebra review: Vectors and matrices, norms, eigen values, SVD  | [Linear algebra](google.com),[Linear algebra](google.com),[Linear algebra](google.com),[Linear algebra](google.com),                 | 
+|        9/4/2016   |  Labor day, NO CLASS                      |    ----           |
+|       8/29/2016    |    Linear algebra review: Vectors and matrices, norms, eigen values, SVD  | [Linear algebra](google.com),[Linear algebra](google.com),[Linear algebra](google.com),[Linear algebra](google.com),                 | 
+|      8/29/2016    |    Linear algebra review: Vectors and matrices, norms, eigen values, SVD  | [Linear algebra](google.com),[Linear algebra](google.com),[Linear algebra](google.com),[Linear algebra](google.com),                 | 
 
 
 
