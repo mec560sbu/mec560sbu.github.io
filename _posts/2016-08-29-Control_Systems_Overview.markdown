@@ -27,6 +27,6 @@ For example, consider the example of maintining the speed of the car using cruis
 
 <div class='fig figcenter fighighlight'>
   <img src='/images/Overview.png'>
-  <figcaption class='figcaptions'>Fig1. - Typical design of a control system.</figcaption>
+  <figcaption>Fig1. - Typical design of a control system.</figcaption>
 </div>
 
