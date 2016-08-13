@@ -1,8 +1,8 @@
 ---
 layout: page
-title: MEC 560 Notes
+title: Course notes
 date: 2016-06-08 22:22:22
-permalink: mec560-notes
+permalink: Course-notes
 ---
 
 This notes are provided as complementary study materials for MEC 560, Advanced Control Systems taught by Dr Vivek Yadav. If you have any questions, feedback, concerns or spot any items that need correction, please email Dr Vivek Yadav.
@@ -19,7 +19,7 @@ State-space analysis methods and multi-variable controller design, as well as an
 
 | Date     | Description | Course links |
 | :----------: | :--------------------------------------: | :--------: | 
-|       8/29/2016    |    Overview of control systems and linear algebra review | [Control systems overview](2016/08/29/Control_Systems_Overview/),[Linear algebra review](google.com),[Linear algebra](google.com),[Linear algebra](google.com),                 | 
+|       8/29/2016    |    Overview of control systems and linear algebra review | [Control systems overview](2016/08/29/Control_Systems_Overview/),[Linear algebra review](2016/08/29/LinAlg_Review_Mbook/),[Linear algebra](2016/08/29/Least_SQ_Fitting/),                 | 
 |        9/4/2016   |  Labor day, NO CLASS                      |    ----           |
 |       8/29/2016    |    Linear algebra review: Vectors and matrices, norms, eigen values, SVD  | [Linear algebra](google.com),[Linear algebra](google.com),[Linear algebra](google.com),[Linear algebra](google.com),                 | 
 |      8/29/2016    |    Linear algebra review: Vectors and matrices, norms, eigen values, SVD  | [Linear algebra](google.com),[Linear algebra](google.com),[Linear algebra](google.com),[Linear algebra](google.com),                 | 
