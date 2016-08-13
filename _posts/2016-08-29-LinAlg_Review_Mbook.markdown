@@ -356,6 +356,7 @@ figure;
 plot(epl_var)
 axis([1 40 .8 1])
 ```
+
 <div class='fig figcenter fighighlight'>
   <img src='/images/expl_var_sig.png'>
   <figcaption>Fig4. - Explained variance vs number of components.</figcaption>
