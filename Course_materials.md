@@ -21,7 +21,7 @@ State-space analysis methods and multi-variable controller design, as well as an
 | :----------: | :--------------------------------------: | :--------: | 
 |       8/29/2016    |    Overview of control systems and linear algebra review | [Control systems overview](2016/08/29/Control_Systems_Overview/),[Linear algebra review](2016/08/29/LinAlg_Review_Mbook/),[Least-square fitting](2016/08/29/Least_SQ_Fitting/),                 | 
 |        9/4/2016   |  Labor day, NO CLASS                      |    ----           |
-|       8/29/2016    |    System dynamics, state space models and their solution | [State space models](2016/08/29/System_Dynamics_and_State_Space_models/),[Solution of state space models](2016/08/29/System_Dynamics_and_State_Space_models/)| 
+|       9/11/2016    |    System dynamics, state space models and their solution | [State space models](2016/08/29/System_Dynamics_and_State_Space_models/),[Solution of state space models](2016/08/29/System_Dynamics_and_State_Space_models/)| 
 |      8/29/2016    |    Linear algebra review: Vectors and matrices, norms, eigen values, SVD  | [Linear algebra](google.com),[Linear algebra](google.com),[Linear algebra](google.com),[Linear algebra](google.com),                 | 
 
 
