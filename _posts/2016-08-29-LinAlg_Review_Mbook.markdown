@@ -231,7 +231,7 @@ end
 
 Singular value decomposition or SVD is a powerful matrix factorization or decomposition technique. In SVD, a \\( n \times m\\) matrix \\(A\\) is decomposed as \\( U \Sigma V^{\*} \\), 
 
-$$ A = U \Sigma V^{\*} $$ 
+$$ A = U \Sigma V^* $$ 
 
 where  \\(U\\), \\( \Sigma \\) and \\(  V \\) satisfy
 
