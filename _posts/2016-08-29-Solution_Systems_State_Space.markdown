@@ -142,7 +142,9 @@ The equation for \\(x[2]\\) is.
 $$ x[2] = A x[1] + B u[1] $$
 
 Substituting \\(x[1]\\) and rearranging,
+
 $$ x[2] = A ( A x[0] + B u[0] ) + B u[1] $$
+
 $$ x[2] = A^2 x[0] + A B u[0] + B u[1] $$
 
 Similarly, \\(x[3]\\) is,
@@ -150,26 +152,29 @@ Similarly, \\(x[3]\\) is,
 $$ x[3] = A^3 x[0] + A^2 B u[0] + A B u[1] + B u[2] $$
 
 Based on the trends above, we propose that solution for \\(x[k]\\) is, 
+
 $$ x[k] = A^{k} x[0] + \sum_{i=0}^{k-1}A^{k-i} B u[i] $$
 
 Given \\(x[k]\\) above, \\(x[k+1]\\) is, 
+
 $$ x[k+1] = A x[k] + B u[k]$$
 
-Substituting $x[k]$ and rearranging,
+Substituting \\(x[k]\\) and rearranging,
 
 $$ x[k+1] = A \left( A^{k} x[0] + \sum_{i=0}^{k-1}A^{k-i-1} B u[i]  \right) + B u[k]$$
 
 $$ x[k+1] = A^{k+1} x[0] + \sum_{i=0}^{k-1}A^{k-i} B u[i] + B u[k]$$
+
 $$ x[k+1] = A^{k+1} x[0] + \sum_{i=0}^{k}A^{k-i} B u[i]$$
 
-As the equation for $x[k+1]$ has the same form as $x[k]$ with the iterator $k$ replaced by $k+1$, we can conclude that the solution is 
+As the equation for \\(x[k+1]\\) has the same form as \\(x[k]\\) with the iterator \\(k\\) replaced by \\(k+1\\), we can conclude that the solution is 
 
 $$ x[k] = A^{k} x[0] + \sum_{i=0}^{k-1}A^{k-i} B u[i] $$
 
 This solution has the following properties, 
 
-1. The solution for $x[k]$ depends only on the control signals between 0 and current time instant (k). 
-2. The solutions for $x[k]$ are bounded if $A^{k}$ is bounded is no longer valid, because the solution depends on $B$ and control history $u[k]$ also. 
+1. The solution for \\(x[k]\\) depends only on the control signals between 0 and current time instant (k). 
+2. The solutions for \\(x[k]\\) are bounded if \\(A^{k}\\) is bounded is no longer valid, because the solution depends on $B$ and control history \\(u[k]\\) also. 
 
 #### 3. Relation between continuous and discrete representations
 
