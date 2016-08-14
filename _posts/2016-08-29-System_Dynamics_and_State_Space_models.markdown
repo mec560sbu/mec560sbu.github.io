@@ -107,6 +107,7 @@ $$ y(t) = \dot{x}(t)$$
 The equation \\(  \ddot{x} = a = \frac{F}{M}\\) is not first order in \\(x\\), we therefore introduce another variable \\(v = \dot{x}\\) and rewrite the above equation as, 
 
 $$  \dot{v} = \frac{F}{M}$$
+
 $$ y(t) = v(t)$$
 
 
