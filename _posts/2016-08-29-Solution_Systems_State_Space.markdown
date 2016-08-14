@@ -12,27 +12,33 @@ mathjax: true
 #### 1. Continuous systems
 
 In general, dynamic systems can be modeled as, 
+
 $$ \dot{x} = f(x,u,t). $$
 $$ y = g(x,u,t). $$
 
 In special case of linear time invariant systems, these equations can be written as 
+
 $$ \frac{d x(t) }{dt} = A x(t) + B u(t) $$
 $$ y(t) = C x(t) + D u(t).$$
 
-We now wish to solve these systems of equation to obtain closed form solutions of the state vector $x(t)$ and measurement vector $y(t)$.
+We now wish to solve these systems of equation to obtain closed form solutions of the state vector $x(t)$ and measurement vector \\( y(t) \\).
 
-#### 1. When $u(t) =0$ for all $t$.
+#### 1. When  \\(u(t) =0 \\) for all \\( t \\).
 
-We first consider the simple example where $u(t) = 0$ for all $t$. In this case, the equations reduce to, 
+We first consider the simple example where \\( u(t) = 0 \\) for all \\( t \\). In this case, the equations reduce to, 
 
 $$ \frac{d x(t) }{dt} = A x(t)  $$
 $$ y(t) = C x(t)$$
 
-Recall, that solution for scalar case $\dot{\alpha} = a \alpha$ is $ \alpha(t) = \alpha_0 exp(at) $, a similar solution can be obtained for the case when $\alpha$ is a vector and $a$ a matrix. In this case, the solution is, 
+Recall, that solution for scalar case \\( \dot{\alpha} = a \alpha \\) is \\( \alpha(t) = \alpha_0 exp(at) \\), a similar solution can be obtained for the case when \\( \alpha \\) is a vector and \\(A \\) a matrix. In this case, the solution is, 
+
 $$x(t) = e^{At} x_0$$
-Note, as $A$ is a matrix, we need to define its exponent. 
-$e^{At} = I + At + \frac{A^2t^2}{2!} + \frac{A^3t^3}{3!} + \frac{A^4t^4}{4!} + \dots $ 
-If the state at some other instant $\tau$ is known, then the solution of $\dot{x} = Ax$ becomes
+
+Note, as \\(A \\) is a matrix, we need to define its exponent. 
+
+$$e^{At} = I + At + \frac{A^2t^2}{2!} + \frac{A^3t^3}{3!} + \frac{A^4t^4}{4!} + \dots $$
+ 
+If the state at some other instant \\( \tau \\) is known, then the solution of $\dot{x} = Ax$ becomes
 $$x(t) = e^{A(t-\tau)} x(\tau)$$
 
 We will next investigate the properties of this solution. Say the matrix A can be written as $A = V \Lambda V^{-1} $, i.e. A has linearly independent eigen vectors. In this case, the solution can be rewritten as, 
@@ -136,14 +142,18 @@ This solution has the following properties,
 #### 3. Relation between continuous and discrete representations
 
 Until now, we treated continuous and discrete systems independently, however, a continuous system can be written in discrete form too. Consider the continuous time system equation 
+
 $$ \frac{d x(t) }{dt} = A x(t) + B u(t) $$
 $$ y(t) = C x(t) + D u(t).$$
 
 The derivative of $x[t]$ can be approximated as, 
+
 $$ \frac{d x(t) }{dt} = \frac{x[t+\Delta t] - x[t]}{\Delta t} $$
+
 where $\Delta t$ is a 'reasonable' choice of discretization step. Appropriate choice of $\Delta t$ is crucial in designing control laws and in studying dynamic systems via simulations. A smaller $\Delta t$ although guarantees better accuracy results in large simulation times, where as a larger $\Delta t$ gives faster simulation results but has poorer accuracy. Choosing $\Delta t$  correctly can give accurate results in reasonable time. Simulation of dynamic systems will be dealt in a different section. Typically $\Delta t$ is chosen as a very small number $0.001s$, however, if the system is highly nonlinear and has millions of parameters (neural networks for example) a much smaller $\Delta t$ (of the order of $10^-6$) is warranted.
 
 The system dynamics equations now become, 
+
 $$\frac{x[t+\Delta t] - x[t]}{\Delta t}  = A x(t) + B u(t) $$
 $$x[t+\Delta t] = x[t]+ A \Delta t x(t) + B\Delta t u(t) $$
 $$x[t+\Delta t] = (I+ A \Delta t) x(t) + B\Delta t u(t) $$
