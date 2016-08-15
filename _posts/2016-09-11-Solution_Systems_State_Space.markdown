@@ -3,7 +3,7 @@ layout: post
 comments: true
 title:  "Solution of linear differential equations in state space form"
 excerpt: "Solution of state space models and their properties."
-date:   2016-08-29 11:00:00
+date:   2016-09-11 11:00:00
 mathjax: true
 ---
 

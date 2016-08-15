@@ -3,7 +3,7 @@ layout: post
 comments: true
 title:  "System dynamics and state space models"
 excerpt: "System dynamics and how to express them in state space form"
-date:   2016-08-29 11:00:00
+date:   2016-09-11 11:00:00
 mathjax: true
 ---
 
