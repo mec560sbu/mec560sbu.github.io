@@ -150,7 +150,8 @@ a:visited { color: #205caa; }
 /* Home styles */
 /* ----------------------------------------------------------*/
 
-.home h1 { margin-bottom: 25px; }
+.home h1 { margin-bottom: 10px;
+			font-size: 150%; }
 
 .posts { list-style-type: none; }
 
