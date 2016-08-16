@@ -531,3 +531,96 @@ fprintf('Difference between original and reduced image is %0.4f %. \n',err_avg);
 By choosing 64 components a \\( 1000 \times 1500 \times 3  \\) or 4.5 million element matrix is reduced to \\( (1000 +1500+1)  \times 64 \times 3 \\) or 480192 element matrix, about 90% saving in storage at the cost of 2% accuracy. 
 		
 
+#### Systems of equation
+
+In control theory, we often come across equations of the form \\( A_{n \times m} x_{m \times 1} = b_{n \times 1} \\) where given \\(A\\) and \\(b\\), we wish to solve for \\(x\\). Lets consider the following cases,
+
+1. When \\(n = m \\), in this case the matrix \\(A\\) is a square matrix and a unique solution \\( x = A^{-1} b \\) exists if \\( A\\) is full rank. If \\(A\\) is not full rank, then no solutions exist if \\(b\\) has a component along the null space of \\(A\\). 
+2. When \\(n > m \\), in this case, there are more equations (or constraints) than free parameters. Therefore, it is not possible to find a solution that solves \\( A x = b\\) for any \\( x \\). Such equations typically arise when we want to estimate some parameter from multiple observations. A typical approcah to solve such type of equations is to formulate an error function (sum of squared errors), and find parameters that minimize it. 
+3. When \\(m > n \\), in this case, there are more unknowns than equations, and solution exists if rank of \\(A\\) is equal to \\(n\\). If \\(A\\) is not full rank, then \\(Ax\\) cannot have components along null space of \\(A\\). Therefore, if \\(b\\) has a component along null space of \\(A\\) then solutions do not exist. These types of equations are very common in control synthesis, where there are multiple ways to control the same system to achieve the same goal. Typically controller parameters are varied to minimize certain cost that combines task and control effort. 
+
+#### Cayley-Hamilton Theorem
+
+Cayley-Hamilton Theorem states that a matrix satisfies its own equation. Recall, characteristic equation of \\(A\\) is, 
+
+$$ det( A - \lambda I) = 0, $$
+
+Substituting \\(A\\) in place for \\( \lambda \\) gives, 
+$$ det( A - A I)=det( A - A )= det( 0) = 0, $$
+
+As 
+
+$$ C(\lambda) =det( A - \lambda I) = \lambda^n + \alpha_1 \lambda^{n-1}+ \alpha_2 \lambda^{n-2}+ \dots + \alpha_0 = 0 ,$$
+
+where \\(C\\) is characteristic polynomial. We also have 
+
+$$ C(A) = A^n + \alpha_1 A^{n-1}+ \alpha_2 A^{n-2}+ \dots + \alpha_0 I = 0.$$
+
+Cayley-Hamilton theorem can be applied to calculate analytic functions of matrix. It is in particular useful to compute exponetials of matices. First consider a polynomial function \\(P(s)\\) whose order is greater than \\(n\\). We can write \\(P(A)\\) as, 
+
+$$ P(A) = Q(A) C(A) + R(A), $$
+
+where \\(Q\\) is analogous to quotient and \\(R\\) is analogous to remainder when the polynomial \\( P(s) \\) is divided by the characteristic polynomial. Note \\(R\\) is a polynomial or order less than \\(n\\). As \\(C(A)=0\\), we have 
+
+$$ P(A) = R(A). $$
+
+Note, as eigen values also satisfy the characteristic equation, we also have \\( P(\lambda_i) = R(\lambda_i) \\) for each \\( \lambda \\). 
+
+The process to compute \\( P(A) \\) is as follows, 
+
+1. Express \\(R(s)\\) as \\( a_0  + a_1 s + a_2 s^2 + \dots + a_{n-1} s^{n-1} \\)
+2. Use \\( P(\lambda_i) =R(\lambda_i) \\) to obtain \\(n-1\\) equations. 
+3. Express \\( n-1 \\) \\( P(\lambda_i) =R(\lambda_i) \\) as a system of equations in unknowns \\(a_0\\) to \\(a_{n-1}\\)
+4. Solve for the unknowns using gaussian elimination or inverting the matrix. 
+
+The same process can be applied to compute any analytical function of a matrix. This process is illustrated by an example below. 
+
+##### Example: 
+Given 
+
+$$A = \left[ \begin{array}{cc} 
+       0 & 1 \\
+        -2 & -3
+    \end{array} \right],$$
+    
+calculate \\( e^{A t}\\)
+
+##### Solution
+Characteristic equation of \\(A\\) is given by 
+
+$$0 = det \left(  \left[ \begin{array}{cc} 
+       0 & 1 \\
+        -2 & -3
+    \end{array} \right] -  s \left[ \begin{array}{cc} 
+       1 & 0 \\
+        0 & 1
+    \end{array} \right] \right),$$
+    
+$$0 = det \left(  \left[ \begin{array}{cc} 
+       -s & 1 \\
+        -2 & -3-s
+    \end{array} \right] \right) = s^2 + 3 s + 2$$
+    
+Therefore, eigen values of \\(A\\) are -2 and -1. 
+
+Using Cayley-Hamilton theorem, 
+
+$$ e^{A t} = a_0 I + a_1 A $$ 
+
+As eigen values also satisfy the characteristic equation, we have
+
+$$ e^{-t} = a_0 - a_1 $$ 
+
+$$ e^{-2t} = a_0 - 2 a_1 $$ 
+
+Solving for \\( a_0 \\) and \\( a_1 \\) gives, 
+
+$$ a_0 = e^{-2t} - e^{-t}  $$ 
+
+$$ a_1 = 2 e^{-t} - e^{-2t}  $$ 
+
+Therefore, exponential of \\( e^{At} \\) is 
+
+$$ e^{A t}  = (2e^{-t} - e^{-2t}) I + (e^{-t} - e^{-2t}) A $$ 
+
+Cayley-Hamilton theorm is very powerful and is used extensively to analyze dynamic systems. As we will see in coming classes, it is used to derive rules to test if a dynamic system is controllable, if the states can be observed given measurement and the system, etc. 
