@@ -581,15 +581,121 @@ $$ A = U \Sigma V^{\*} $$<p></p>
 </figure>
 </div>
 </div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="SVD-example-2">SVD example 2<a class="anchor-link" href="#SVD-example-2">&#182;</a></h3><figure>
+  <img src="images/img_recons.png",width=200, height=200)>
+</figure>
+</div>
+</div>
 </div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="SVD-example-2">SVD example 2<a class="anchor-link" href="#SVD-example-2">&#182;</a></h3><p>SVD for image compression. SVD can be used for image compression too.</p>
-<figure>
-  <img src="images/img_recons.png",width=200, height=200)>
+<h4 id="Systems-of-equation">Systems of equation<a class="anchor-link" href="#Systems-of-equation">&#182;</a></h4><p>In control theory, we often come across equations of the form $ A_{n \times m} x_{m \times 1} = b_{n \times 1} $  where given \(A\) and \(b\), we wish to solve for \(x\). Lets consider the following cases,</p>
+<ol>
+<li>When \(n = m \), in this case the matrix \(A\) is a square matrix and a unique solution \( x = A^{-1} b \) exists if \( A\) is full rank. If \(A\) is not full rank, then no solutions exist if \(b\) has a component along the null space of \(A\). </li>
+<li>When \(n &gt; m \), in this case, there are more equations (or constraints) than free parameters. Therefore, it is not possible to find a solution that solves \( A x = b\) for any \( x \). Such equations typically arise when we want to estimate some parameter from multiple observations. A typical approcah to solve such type of equations is to formulate an error function (sum of squared errors), and find parameters that minimize it. </li>
+<li>When \(m &gt; n \), in this case, there are more unknowns than equations, and solution exists if rank of \(A\) is equal to \(n\). If \(A\) is not full rank, then \(Ax\) cannot have components along null space of \(A\). Therefore, if \(b\) has a component along null space of \(A\) then solutions do not exist. These types of equations are very common in control synthesis, where there are multiple ways to control the same system to achieve the same goal. Typically controller parameters are varied to minimize certain cost that combines task and control effort. </li>
+</ol>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Least-square-fitting">Least square fitting<a class="anchor-link" href="#Least-square-fitting">&#182;</a></h3><h4 id="Problem-statement">Problem statement<a class="anchor-link" href="#Problem-statement">&#182;</a></h4><p>Given a set of \( N \) training points such that for each \( i \in [0,N] \), \(  \mathbf{x}_i \in R^M \)  maps to a scalar output \(y_i\), the goal is to find a linear vector \(\mathbf{a}\) such that the error</p>
+$$ J \left(\mathbf{a},a_0 \right) = \frac{1}{2} \sum_{i}^{N} \sum_{j}^{m} \left( a_j x_{i,j} + a_0 - y_i    \right)^2 , $$<p>is minimized. Where \(a_j \) is the \( j^{th} \) component and \( a_0 \) is the intercept.</p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Sum-of-squared-errors">Sum of squared errors<a class="anchor-link" href="#Sum-of-squared-errors">&#182;</a></h4><p>The cost fuction above can be rewritten as a dot product of the error vector</p>
+$$ e(W) = \left( X W - y    \right) .$$<p>where X is a matrix of n times m+1, y is a n-dimensional vector and W is (m+1)-dimensional vector.</p>
+<p>Therefore, the cost function J is now,</p>
+$$ J \left(\mathbf{W} \right) = \frac{1}{2} e(W)^T e(W)= \frac{1}{2} \left( \mathbf{ X W - y    }  \right)^T  \left(\mathbf{ X W - y    } \right) .$$
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="After-some-matrix-derivatives">After some matrix derivatives<a class="anchor-link" href="#After-some-matrix-derivatives">&#182;</a></h4><p>Expanding the transpose term, 
+$$ J \left(\mathbf{W} \right) = \frac{1}{2} \left( \mathbf{W^T X^T - y^T}    \right)  \left(\mathbf{ X W - y    }\right) $$</p>
+$$  = \frac{1}{2} \left( \mathbf{ W^T X^T  X W - 2 y^T X W + y^T y}    \right)  $$<p>Note, all terms in the equation above are scalar. Taking derivative with respect to W gives,</p>
+$$ \frac{\partial \mathbf{J}}{\partial \mathbf{W}} =  \left( \mathbf{ W^T X^T  X - y^T X }    \right)  $$
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Gradient-descent-method">Gradient-descent method<a class="anchor-link" href="#Gradient-descent-method">&#182;</a></h4><p>Minimum is obtained when the derivative above is zero. Most commonly used approach is a gradient descent based solution where we start with some initial guess for W, and update it as,</p>
+$$ \mathbf{W_{k+1}}  = \mathbf{W_{k}} - \mu \frac{\partial \mathbf{J}}{\partial \mathbf{W}} $$<p>It always a good idea to test if the analytically computed derivative is correct, this is done by using the central difference method, 
+$$ \frac{\partial \mathbf{J}}{\partial \mathbf{W}}_{numerical} \approx  \frac{\mathbf{J(W+h) - J(W-h)}}{2h} $$</p>
+<p>Central difference method is better suited because the central difference method has error of \( O(h^2 \), while the forward difference has error of \( O(h) \). Interested readers may look up Taylor series expansion or may choose to wait for a later post.</p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Gradient-descent-method">Gradient-descent method<a class="anchor-link" href="#Gradient-descent-method">&#182;</a></h4><figure>
+  <img src="images/Fit_vs_Iteration.png",width=200, height=200)>
+</figure>
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Pseudoinverse-method">Pseudoinverse method<a class="anchor-link" href="#Pseudoinverse-method">&#182;</a></h4><p>Another method is to directly compute the best solution by setting the first derivative of the cost function to zero.</p>
+$$ \frac{\partial \mathbf{J}}{\partial \mathbf{W}} =  \left( \mathbf{ W^T X^T  X - y^T X }    \right)  = \mathbf{0}$$<p>By taking transpose and solving for W,</p>
+$$ \mathbf{W} = \mathbf{ \underbrace{(X^T  X)^{-1}X^T}_{Pseudoinverse} ~ y } $$
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Pseudoinverse-method">Pseudoinverse method<a class="anchor-link" href="#Pseudoinverse-method">&#182;</a></h4><figure>
+  <img src="images/PInvFit.png",width=200, height=200)>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Circle-fitting">Circle fitting<a class="anchor-link" href="#Circle-fitting">&#182;</a></h4><figure>
+  <img src="images/CircleFit.png",width=200, height=200)>
 </figure>
 </div>
 </div>
