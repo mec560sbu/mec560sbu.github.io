@@ -408,7 +408,7 @@ $$ a_{1\times n} B_{n \times m} = a_1 B_{(1,:)}+ a_2 B_{(2,:)}+ ... + a_n B_{(n,
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h4 id="Matrix-inverse-example">Matrix inverse example<a class="anchor-link" href="#Matrix-inverse-example">&#182;</a></h4><p>Compute the inverse of</p>
-$$ A = \left[ \begin{array}{ccc}  1 & 2 &  3 \\ 4 & 5 & 6 \\ 7 & 8 & 9  \end{array} \right]$$
+$$ A = \left[ \begin{array}{ccc}  1 & 2 &  3 \\ 4 & 5 & 6 \\ 7 & 8 & 1  \end{array} \right]$$
 </div>
 </div>
 </div>
@@ -420,7 +420,7 @@ $$ A = \left[ \begin{array}{ccc}  1 & 2 &  3 \\ 4 & 5 & 6 \\ 7 & 8 & 9  \end{arr
 <h4 id="Matrix-inverse-example">Matrix inverse example<a class="anchor-link" href="#Matrix-inverse-example">&#182;</a></h4><ol>
 <li>Compute minors:  Minor of an element at \( (i,j)\) position is taken by removing \( i^{th}\) row and \(j^{th}\) columns. </li>
 <li>Compute cofactor:  Cofactor of an element at \( (i,j)\) position is taken by computing the Minor and then multiplying it with \( (-1)^{i*j} \)</li>
-<li>Compute inverse by multiplying cofactors of \( (i,j)^{th}\) element by the element and add along any row (or column). </li>
+<li>Compute inverse by replacing each element of the matrix by its cofactor and taking transpose.</li>
 </ol>
 
 </div>
