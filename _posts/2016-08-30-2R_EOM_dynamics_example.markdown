@@ -54,7 +54,11 @@ $$ PE = m_1 g P_{1,y} + m_2 g P_{2,y} $$
 
 #### 3. Derive equations of motion 
 
-Equations of motion are derived using, 
+We derive equations of motion by first setting up a Lagrangian \\( L \\) as
+
+$$ L = KE - PE $$
+
+Equations of motion are then derived using, 
 
 $$ \frac{d}{dt} \left( \frac{\partial L }{\partial \dot{q}} \right) -  \frac{\partial L }{\partial q} = \tau, $$
 
