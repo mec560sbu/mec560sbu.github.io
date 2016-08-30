@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8" />
-<title>MEC560_Assignment1_DUE_09122016</title>
+<title>MEC560_Assignment1_DUE_09192016</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -176,8 +176,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="MEC-560:-Advanced-control-systems">MEC 560: Advanced control systems<a class="anchor-link" href="#MEC-560:-Advanced-control-systems">&#182;</a></h2><h3 id="Assignment-1">Assignment 1<a class="anchor-link" href="#Assignment-1">&#182;</a></h3><h3 id="Due-9/12/2016-at-4:00-pm.">Due 9/12/2016 at 4:00 pm.<a class="anchor-link" href="#Due-9/12/2016-at-4:00-pm.">&#182;</a></h3><h3 id="NO-LATE-SUBMISSIONS-ACCEPTED.">NO LATE SUBMISSIONS ACCEPTED.<a class="anchor-link" href="#NO-LATE-SUBMISSIONS-ACCEPTED.">&#182;</a></h3><p><a href="https://drive.google.com/a/stonybrook.edu/file/d/0B51BYOSh3EKQUzNOWUtkWlJsTzg/view">Link to the ipython notebook on google drive</a></p>
-<h4 id="Guidelines-and-tips-to-reduce-effort:">Guidelines and tips to reduce effort:<a class="anchor-link" href="#Guidelines-and-tips-to-reduce-effort:">&#182;</a></h4><p>Please submit assignments inclass or electronically as markdown or MATLAB's live editor with all your work documented in it. There are multiple ways you can prepare this document that will significantly reduce your effort. Below are some options listed from highly-recommended to best-avoid.</p>
+<h2 id="MEC-560:-Advanced-control-systems">MEC 560: Advanced control systems<a class="anchor-link" href="#MEC-560:-Advanced-control-systems">&#182;</a></h2><h3 id="Assignment-1">Assignment 1<a class="anchor-link" href="#Assignment-1">&#182;</a></h3><h3 id="Due-9/19/2016-at-4:00-pm.">Due 9/19/2016 at 4:00 pm.<a class="anchor-link" href="#Due-9/19/2016-at-4:00-pm.">&#182;</a></h3><h3 id="NO-LATE-SUBMISSIONS-ACCEPTED.">NO LATE SUBMISSIONS ACCEPTED.<a class="anchor-link" href="#NO-LATE-SUBMISSIONS-ACCEPTED.">&#182;</a></h3><h4 id="Guidelines-and-tips-to-reduce-effort:">Guidelines and tips to reduce effort:<a class="anchor-link" href="#Guidelines-and-tips-to-reduce-effort:">&#182;</a></h4><p>Please submit assignments inclass or electronically as markdown or MATLAB's live editor with all your work documented in it. There are multiple ways you can prepare this document that will significantly reduce your effort. Below are some options listed from highly-recommended to best-avoid.</p>
 <ol>
 <li><strong><em>Ipython notebooks and MATLAB </em></strong>: If you have anaconda/python and MATLAB installed, you can run MATLAB on ipython notebooks. Ipython notebooks provide easy markdown interface which allows you to add images, equations, websites, audio/video files, code and document your findings all in one place. This however requires some knowledge of typesetting latex equations and basics of markdown. All the course notes, slides and the website were made using ipython notebooks. Moreover, python provides easy interfacing with several webtools, sqlite, apache spark, hadoop, etc. </li>
 <li><strong><em> Use MATLAB's live editor </em></strong>: MATLAB has introduced its own version of notebook-like interface starting 2016 onwards. You can run your scripts in their 'live editors', and it lets you add code, equations, images, text etc in one place and publish the document as HTML or PDF. It is still in nascent stage and is a good option if you are patient. It provides </li>
@@ -344,7 +343,7 @@ $$ B = P^{-1} A P .$$<p>The transformation \( P^{-1} A P  \) is also called simi
 <li>Do \( A \) and \( B\) have the same eigen vectors? </li>
 <li>Consider the dynamic system given by \( \dot{x} = Ax + Bu \). Apply a transformation \( P \) such that the transformed variable \( \hat{x} = P x \).</li>
 <li>What will happen in the special case where \(P\) is the vector of eigen values? What can you say about the stability and controlability of the tranformed system by looking at the new dynamics equations?</li>
-<li>Consider the system given below, and transform is such that \(P\) is the vector of eigen values. Confirm your predictions from part 4.</li>
+<li>Consider the system given below, and transform it such that \(P\) is the vector of eigen values. Confirm your predictions from part 4.</li>
 </ol>
 $$A = \left[ \begin{array}{ccc} 
        0 & 1 & .5 \\
@@ -400,9 +399,7 @@ $$A = \left[ \begin{array}{ccc}
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Question-5:-Pendulum-on-a-cart-example">Question 5: Pendulum on a cart example<a class="anchor-link" href="#Question-5:-Pendulum-on-a-cart-example">&#182;</a></h3><p>Derive the equations of motion of a pendulum balancing on a cart, and linearize them about the steady state \( \theta = 0 \) and \( x = 0 \). Express the equations in state space form as \( \dot{x} = Ax + Bu \) and \( y = Cx \).</p>
-<div class='fig figcenter fighighlight'>
-  <img src='/images/cart_example.png'>
-</div>
+<p><img src="images/cart_example.png",width=200, height=200)></p>
 
 </div>
 </div>
