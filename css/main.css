@@ -16,6 +16,9 @@ body {
   background-color: #fdfdfd;
 }
 
+fig {
+	text-align: center;
+}
 figcaption {
 	text-align: center;
 }
