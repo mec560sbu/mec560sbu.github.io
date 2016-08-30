@@ -16,10 +16,10 @@ body {
   background-color: #fdfdfd;
 }
 
-fig {
+.figcenter {
 	text-align: center;
 }
-figcaption {
+.figcaption {
 	text-align: center;
 }
 
