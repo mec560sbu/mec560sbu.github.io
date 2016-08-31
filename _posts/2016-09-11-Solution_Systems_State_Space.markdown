@@ -41,7 +41,7 @@ Note, as \\(A \\) is a matrix, we need to define its exponent.
 
 $$e^{At} = I + At + \frac{A^2t^2}{2!} + \frac{A^3t^3}{3!} + \frac{A^4t^4}{4!} + \dots $$
  
-If the state at some other instant \\( \tau \\) is known, then the solution of $\dot{x} = Ax$ becomes
+If the state at some other instant \\( \tau \\) is known, then the solution of \\( \dot{x} = Ax \\) becomes
 
 $$x(t) = e^{A(t-\tau)} x(\tau)$$
 
@@ -188,7 +188,7 @@ The derivative of $x[t]$ can be approximated as,
 
 $$ \frac{d x(t) }{dt} = \frac{x[t+\Delta t] - x[t]}{\Delta t} $$
 
-where \\(\Delta t\\) is a 'reasonable' choice of discretization step. Appropriate choice of \\(\Delta t\\) is crucial in designing control laws and in studying dynamic systems via simulations. A smaller \\(\Delta t\\) although guarantees better accuracy results in large simulation times, where as a larger \\(\Delta t\\) gives faster simulation results but has poorer accuracy. Choosing \\(\Delta t\\) correctly can give accurate results in reasonable time. Simulation of dynamic systems will be dealt in a different section. Typically \\(\Delta t\\) is chosen as a very small number \\(0.001s\\), however, if the system is highly nonlinear and has millions of parameters (neural networks for example) a much smaller \\(\Delta t\\) (of the order of \\(10^-6\\)) is warranted.
+where \\(\Delta t\\) is a 'reasonable' choice of discretization step. Appropriate choice of \\(\Delta t\\) is crucial in designing control laws and in studying dynamic systems via simulations. A smaller \\(\Delta t\\) although guarantees better accuracy results in large simulation times, where as a larger \\(\Delta t\\) gives faster simulation results but has poorer accuracy. Choosing \\(\Delta t\\) correctly can give accurate results in reasonable time. Simulation of dynamic systems will be dealt in a different section. Typically \\(\Delta t\\) is chosen as a very small number \\(0.001s\\), however, if the system is highly nonlinear and has millions of parameters (neural networks for example) a much smaller \\(\Delta t\\) (of the order of \\(10^{-6}\\)) is warranted.
 
 The system dynamics equations now become, 
 
@@ -198,7 +198,7 @@ $$x[t+\Delta t] = x[t]+ A \Delta t x(t) + B\Delta t u(t) $$
 
 $$x[t+\Delta t] = (I+ A \Delta t) x(t) + B\Delta t u(t) $$
 
-Note, if all the eigen values of \\(A\\) are positive, then the eigen values of \\((I+ A \Delta t)\\) for a small \\(\Delta t\\) are negative, and \\(e^{At}\\) or \\((I+ A \Delta t)^k\\) both will converge to \\(0\\) as \\(t,k \rightarrow \infty \\).
+Note, if all the eigen values of \\(A\\) are negative, then the eigen values of \\((I+ A \Delta t)\\) for a small \\(\Delta t\\) are less than 1 for a very small \\( \Delta t \\), and \\(e^{At}\\) or \\((I+ A \Delta t)^k\\) both converge to \\(0\\) as \\(t,k \rightarrow \infty \\).
 
 #### Conclusion:
 
