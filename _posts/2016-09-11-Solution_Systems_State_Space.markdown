@@ -198,7 +198,7 @@ $$x[t+\Delta t] = x[t]+ A \Delta t x(t) + B\Delta t u(t) $$
 
 $$x[t+\Delta t] = (I+ A \Delta t) x(t) + B\Delta t u(t) $$
 
-Note, if all the eigen values of \\(A\\) are negative, then the eigen values of \\((I+ A \Delta t)\\) for a small \\(\Delta t\\) are less than 1 for a very small \\( \Delta t \\), and \\(e^{At}\\) or \\((I+ A \Delta t)^k\\) both converge to \\(0\\) as \\(t,k \rightarrow \infty \\).
+Note, if all the eigen values of \\(A\\) are negative, then the eigen values of \\((I+ A \Delta t)\\) for a sufficiently small \\(\Delta t\\) are less than 1, and \\(e^{At}\\) or \\((I+ A \Delta t)^k\\) both converge to \\(0\\) as \\(t,k \rightarrow \infty \\).
 
 #### Conclusion:
 
