@@ -10,7 +10,19 @@ mathjax: true
 
 #### Vivek Yadav 
 
-This document presents Lagrangian techniques to derive equations of motion using symbolic toolbox in MATLAB. Consider the model of a simple manipulator shown below. This configuration is also referred to as double pendulum. We assume that the massless links of length \\( l_1 \\) and \\( l_2\\) connect masses \\( m_1 \\) and \\(m_2\\), and the corresponding segment angles are given by \\( \theta_1 \\) and  \\( \theta_2 \\) . We assume that there is one motor each at each of the joints.
+#### Motivation
+This document presents Lagrangian techniques to derive equations of motion using symbolic toolbox in MATLAB. Mathematical models are developed to approximate what the actual system may be doing. All mathematical models involve some simplifying assumptions, and typically relaxing these assumptions results in more complex representation of the dynamics of the system. As a result, traditional pen and paper techniques are not sufficient to derive equations representing dynamics of complex systems. Screen shot below presents 2 terms of inertia matrix of 3-D humanoid robot. 
+
+<div class='fig figcenter fighighlight'>
+  <img src='/images/biped_model.gif'>
+  <figcaption>Fig2. - 7-link biped with curved feet</figcaption>
+</div>
+
+Thankfully MATLAB, python, and other programming languages offer support for symbolic calculations that can be utilized to automate deriving these equations. In this document, we will derive equations of motion for a 2-link robotic arm (or double pendulum) using MATLAB. 
+
+### two-link robotic arm model
+
+Consider the model of a simple manipulator shown below. This configuration is also referred to as double pendulum. We assume that the massless links of length \\( l_1 \\) and \\( l_2\\) connect masses \\( m_1 \\) and \\(m_2\\), and the corresponding segment angles are given by \\( \theta_1 \\) and  \\( \theta_2 \\) . We assume that there is one motor each at each of the joints.
 
 
 <div class='fig figcenter fighighlight'>
@@ -21,9 +33,10 @@ This document presents Lagrangian techniques to derive equations of motion using
 *** We chose angles \\( \theta_1 \\) and \\( \theta_2 \\) to describe the system because this represent a representation that requires least number of independent variables to completely describe the system. It is possible to use \\( x \\) and \\( y \\) locations of the masses to derive the equations of motion too, however in such cases additional constraints must be imposed on the system to ensure the lengths of links remain constant. Such contraints can be imposed using Pfaffin constraints. However, this method is beyond the scope of this course. For details please refer to chapter 6 in the [robotics book by Murray and Sastry](http://www.cds.caltech.edu/~murray/books/MLS/pdf/mls94-complete.pdf). For complex robotic systems or biomechanics simulations, the position vectors are obtained using screw theory or Denavit–Hartenberg parameters. Using appropriate coordinate systems can greatly simplify the equations of motion, however this may not always be possible. For example, human walking model with curved feet cannot be modeled only by ignoring the position and velocity constraint between feet and ground. ***
 
 <div class='fig figcenter fighighlight'>
-  <img src='/images/biped_model.gif'>
-  <figcaption>Fig2. - 7-link biped with curved feet</figcaption>
+  <img src='/images/EOM_ss.png'>
+  <figcaption>Fig3. - 7-link biped with curved feet</figcaption>
 </div>
+
 
 We will derive the equations of motions using Lagrange method in the following steps,
 
