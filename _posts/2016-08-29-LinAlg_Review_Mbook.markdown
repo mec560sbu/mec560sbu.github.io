@@ -598,7 +598,7 @@ $$0 = det \left(  \left[ \begin{array}{cc}
     
 $$0 = det \left(  \left[ \begin{array}{cc} 
        -s & 1 \\
-        -2 & -3-s
+        -2 & 3-s
     \end{array} \right] \right) = s^2 + 3 s + 2$$
     
 Therefore, eigen values of \\(A\\) are -2 and -1. 
