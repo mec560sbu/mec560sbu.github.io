@@ -615,9 +615,9 @@ $$ e^{-2t} = a_0 - 2 a_1 $$
 
 Solving for \\( a_0 \\) and \\( a_1 \\) gives, 
 
-$$ a_0 = e^{-2t} - e^{-t}  $$ 
+$$ a_0 = 2 e^{-t} - e^{-2t}   $$ 
 
-$$ a_1 = 2 e^{-t} - e^{-2t}  $$ 
+$$ a_1 = e^{-t}  - e^{-2t}  $$ 
 
 Therefore, exponential of \\( e^{At} \\) is 
 
