@@ -11,7 +11,7 @@ System dynamics is a mathematical approach to understanding the behavior of comp
 
 
 <div class='fig figcenter fighighlight'>
-  <img src='/images/controller_overview.png' ,height = 600 , width = 600 >
+  <img src='/images/controller_overview.png'>
   <figcaption>Fig 2. - Simple 2-link manipulator or double pendulum</figcaption>
 </div>
 

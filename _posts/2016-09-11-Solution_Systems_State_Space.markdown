@@ -56,7 +56,7 @@ $$x(t) = V \left ( I + \Lambda t +
 
 $$x(t) = V e^{\Lambda t} V^{-1} x_0,$$
 
-where \\(e^{\Lambda t}\\) is the matrix with zero off-diagonal entires and whose \\(i^{th}\\) diagonal entry is \\(e^{\lambda_i t}\\). If all the real parts of the eigen values of \\(A\\) are negative, then the solution \\(x(t) \rightarrow 0\\), else \\(x(t) \rightarrow \infty\\). This property is crucial in designing control systems. As we will see later in this course, we want to design the control law in such a way that the modified eigenvalues of system dynamics are negative. 
+where \\(e^{\Lambda t}\\) is the matrix with zero off-diagonal entires and whose \\(i^{th}\\) diagonal entry is \\(e^{\lambda_i t}\\). If all the real parts of the eigen values of \\(A\\) are negative, then the solution \\(x(t) \rightarrow 0\\), else \\(x(t) \rightarrow \infty\\). This property is crucial in designing control systems. As we will see later in this course, we want to design the control law in such a way that the modified eigenvalues of system dynamics have negative real parts. 
 
 
 
@@ -198,7 +198,7 @@ $$x[t+\Delta t] = x[t]+ A \Delta t x(t) + B\Delta t u(t) $$
 
 $$x[t+\Delta t] = (I+ A \Delta t) x(t) + B\Delta t u(t) $$
 
-Note, if all the eigen values of \\(A\\) are negative, then the eigen values of \\((I+ A \Delta t)\\) for a sufficiently small \\(\Delta t\\) are less than 1, and \\(e^{At}\\) or \\((I+ A \Delta t)^k\\) both converge to \\(0\\) as \\(t,k \rightarrow \infty \\).
+Note, if all the eigen values of \\(A\\) have negative real parts, then the real parts of eigen values of \\((I+ A \Delta t)\\) for a sufficiently small \\(\Delta t\\) are less than 1, and \\(e^{At}\\) or \\((I+ A \Delta t)^k\\) both converge to \\(0\\) as \\(t,k \rightarrow \infty \\).
 
 #### Conclusion:
 
