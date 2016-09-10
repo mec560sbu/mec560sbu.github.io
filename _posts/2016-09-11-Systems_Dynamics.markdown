@@ -175,6 +175,7 @@ x_2 \end{array} \right]}_X + \underbrace{\left[ \begin{array}{c} 0 \\
 \frac{1}{m} \end{array} \right]}_B \underbrace{F}_u  $$ 
 
 Say the measurements we have in this case are the positon \\( (x) \\) and the force \\( (F) \\), the measurement equations can be written as, 
+
 $$ y = \underbrace{\left[ \begin{array}{cc} 1 & 0 \\ 
 0 & 0 \end{array} \right]}_C \underbrace{\left[ \begin{array}{c} x_1 \\ 
 x_2 \end{array} \right]}_X + \underbrace{\left[ \begin{array}{c} 0 \\ 
