@@ -193,21 +193,21 @@ $$ y(t) = C x(t) + D u(t) .$$
 
 The derivative can be approximated using euler's difference formula as, 
 
-$$ \dot{x} \approx \frac{x(t+\delta t) - x(t) }{ \delta t} ,$$ 
+$$ \dot{x} \approx \frac{x(t+\Delta t) - x(t) }{ \Delta t} ,$$ 
 
 and by sampling at fixed intervals, time can be reindexed by an iterator \\( k \\).  The derivative now becomes
 
-$$ \dot{x} \approx \frac{x[k+1] - x[k] }{ \delta t} .$$
+$$ \dot{x} \approx \frac{x[k+1] - x[k] }{ \Delta t} .$$
 
 The system dynamics equations can therefore be written as
 
-$$  \frac{x[k+1] - x[k] }{ \delta t} \approx A x[k] + B u[k]. $$ 
+$$  \frac{x[k+1] - x[k] }{ \Delta t} \approx A x[k] + B u[k]. $$ 
 
 Rearranging the terms gives, 
 
-$$  x[k+1]  \approx \underbrace{(I + A \delta t)}_{A_d} x[k] + \underbrace{B \delta t}_{B_d} u[k]. $$ 
+$$  x[k+1]  \approx \underbrace{(I + A \Delta t)}_{A_d} x[k] + \underbrace{B \Delta t}_{B_d} u[k]. $$ 
 
-*** Note: Choice of $ \delta t $ is very crucial in discretizing a continuous time system. Choosing a very small $ \delta t $ results in an approximation with large number of contraint equations, and a very large $ \delta t $ can result in large approximation error. These errors are also referred to as discretization errors. *** 
+*** Note: Choice of $ \Delta t $ is very crucial in discretizing a continuous time system. Choosing a very small $ \Delta t $ results in an approximation with large number of contraint equations, and a very large $ \Delta t $ can result in large approximation error. These errors are also referred to as discretization errors. *** 
 
 ### State-space representation: Applications
 
