@@ -47,7 +47,15 @@ where \\(x \\) and \\(y\\) define the position of the car, and \\(\theta \\) def
 
 #### Using different system dynamics model for different tasks of the controller. 
 
-In many applications, it is not efficient to use a detailed model of the system. A detailed model is useful for generating control signals that do not violate the dynamics of the system. For example, a detailed model of a car is needed to avoid situations where the heading of car is commanded to change without changing position along its length. However, a detailed model is not as important for applications where we are interested in a gross performance measure, such as minimum-time trajectory between two points on a map. In this case, using a detailed model of the car will further complicate the already complex task of finding the shortest path between two points. In such cases, a point mass model is used to compute the fastest path, and a detailed model is used to generate commands to follow that path. This process of separating the control task into multiple levels is also referred as a hierarchical control scheme.  
+In many applications, it is not efficient to use a detailed model of the system. A detailed model is useful for generating control signals that do not violate the dynamics of the system. For example, a detailed model of a car is needed to avoid situations where the heading of car is commanded to change without changing position along its length. However, a detailed model is not as important for applications where we are interested in a gross performance measure, such as minimum-time trajectory between two points on a map. In this case, using a detailed model of the car will further complicate the already complex task of finding the shortest path between two points. In such cases, a point mass model is used to compute the fastest path, and a detailed model is used to generate commands to follow that path. This process of separating the control task into multiple levels is also referred as a hierarchical control scheme. Below is one such example where an obstacle-free trajectory is first obtained by completely ignoring the dynamics, next a linearized plane model with actuator contrainsts is used to generate smoother trajectory, and finally the actual UAVs model is used to generate commands for its actuators.
+
+<div class='fig figcenter fighighlight'>
+  <img src='/images/receding_hrzn.png'>
+  <figcaption>Fig 2. - [Receding horizon control example](http://hohmann.mit.edu/papers/ACC_02_RecedingHorizon.pdf)  </figcaption>
+</div>
+
+
+
 
 #### Types of system dynamics models: Continuous, discrete and hybrid
 
