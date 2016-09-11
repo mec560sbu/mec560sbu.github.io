@@ -12,7 +12,7 @@ System dynamics is a mathematical approach to understanding the behavior of comp
 
 <div class='fig figcenter fighighlight'>
   <img src='/images/controller_overview.png'>
-  <figcaption>Fig 1. - Simple 2-link manipulator or double pendulum</figcaption>
+  <figcaption>Fig 1. - Overview of a typical control system </figcaption>
 </div>
 
 For the example above, the system dynamics model is used to obtain estimates of position and heading of the car from sensor measurement. These estimates are then fed into the controller which utilizes the system dynamics model along with estimates of position and velocity to generate a control law to be applied to the car's actuators. In summary, system dynamics model is used convert measurements to estimates of the values necessary to describe what the system is doing, and for designing the control law. 
