@@ -11,7 +11,7 @@ System dynamics is a mathematical approach to understanding the behavior of comp
 
 
 <div class='fig figcenter fighighlight'>
-  <img src='images/controller_overview.png'>
+  <img src='/images/controller_overview.png'>
   <figcaption>Fig 1. - Overview of a typical control system </figcaption>
 </div>
 
