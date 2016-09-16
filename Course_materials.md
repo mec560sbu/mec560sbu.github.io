@@ -7,7 +7,7 @@ permalink: mec560-notes
 
 #### Course layout
 
-All the course slides are available on [google drive](https://drive.google.com/drive/folders/0B51BYOSh3EKQVklRc3QtZy0xUEU?usp=sharing). Codes are available on course repository on [github](https://github.com/mec560sbu/mec560sbu.github.io) and on [google drive](https://drive.google.com/drive/u/1/folders/0B51BYOSh3EKQMTEzMEdmOXJ1dzg). 
+All documents for the course page are available on course repository on [github](https://github.com/mec560sbu/mec560sbu.github.io) and on [google drive](https://drive.google.com/drive/u/1/folders/0B51BYOSh3EKQMTEzMEdmOXJ1dzg). 
 
 
 
@@ -20,7 +20,7 @@ All the course slides are available on [google drive](https://drive.google.com/d
 |       |                       |            |
 |       9/12/2016    |    Lagrange Methods, System dynamics, state space models and their solution | [System dyamics and state space models](2016/09/11/Systems_Dynamics/),[Equations of motion of 2R manipulator](https://mec560sbu.github.io/2016/08/30/2R_EOM_dynamics_example/),[Solution of state space models](2016/09/11/Solution_Systems_State_Space/) [Slides: System Dynamics](https://mec560sbu.github.io/Prersentations/Pres_SystemDynamics.html#/), [Slides: State Space Solution](https://mec560sbu.github.io/Prersentations/State_space_solutions.html#/)| 
 |       |                       |            |
-|      9/19/2016    |    Controllability and Observability, Controller/observer synthesis, SVD  | [Controllability](google.com),[Linear algebra](google.com),[Linear algebra](google.com),[Linear algebra](google.com),                 | 
+|      9/19/2016    |    Controllability and Observability, Controller/observer synthesis | [Controllability](google.com),[Linear algebra](google.com),[Linear algebra](google.com),[Linear algebra](google.com),                 | 
 
 
 

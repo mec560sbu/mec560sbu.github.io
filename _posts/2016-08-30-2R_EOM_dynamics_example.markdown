@@ -134,7 +134,7 @@ Note: Partial derivatives are computed using matrix derivatives as shown [here](
 
 ### MATLAB implementation of the code. 
 
-We almost never perform these calculations by hand. Instead, we use MATLAB's symbolic toolbox to implement reusable functions to perform the calculations above. The code and accompanying functions can be downloaded from the [github repository for MATLAB codes](https://github.com/mec560sbu/mec560sbu.github.io/tree/master/mec560_MATLAB_codes/Deriving_EOMs).  
+We almost never perform these calculations by hand. Instead, we use MATLAB's symbolic toolbox to implement reusable functions to perform the calculations above. The code and accompanying functions can be downloaded from the [github repository for MATLAB codes](https://github.com/mec560sbu/mec560sbu.github.io/tree/master/mec560_MATLAB_codes/Deriving_EOMs) or [google drive](https://drive.google.com/drive/u/1/folders/0B51BYOSh3EKQMTEzMEdmOXJ1dzg).  
 
 
 ```matlab
