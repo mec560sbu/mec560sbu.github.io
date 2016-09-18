@@ -1,8 +1,8 @@
 ---
 layout: post
 comments: true
-title:  "Controllability and observability of linear dynamic systems"
-excerpt: "Controllability and observability of linear dynamic systems."
+title:  "Controllability"
+excerpt: "Derivation of controllability conditions for a linear system dynamics."
 date:   2016-09-19 11:00:00
 mathjax: true
 ---
