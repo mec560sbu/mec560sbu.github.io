@@ -122,7 +122,7 @@ $$ \dot{x_1} = 0 $$
 
 $$ \dot{x_2} = A_{22} x_2$$  
 
-Depending on the value of \\( A_2_2} \\), this system may be controllable or not controllable. If \\( A_2_2 \\) is negative, then the \\( x_2 \\) goes to 0, else it blows up. 
+Depending on the value of $ A_{22} $, this system may be controllable or not controllable. If $ A_{22} $ is negative, then the \\( x_2 \\) goes to 0, else it blows up. 
 
 #### Stabalizability
 In addition to controllability, a concept of stabalizability is also defined. A system is stabalizable if for any given initial conditions, there exists atleast one series of control inputs that drive the system states to 0 either in finite time or asymptotically. All controlable states are stabalizable.
