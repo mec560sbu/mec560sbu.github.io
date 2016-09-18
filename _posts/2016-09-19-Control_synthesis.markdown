@@ -2,7 +2,7 @@
 layout: post
 comments: true
 title:  "Control synthesis"
-excerpt: "Control synthesis"
+excerpt: "Control synthesis, pole-placement for control of spring mass damper system under different conditions."
 date:   2016-09-19 11:00:00
 mathjax: true
 ---
