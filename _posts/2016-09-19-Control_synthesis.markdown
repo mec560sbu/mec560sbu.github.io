@@ -212,8 +212,10 @@ xlabel('time')
 ```
 
 
-![png](output_1_0.png)
-
+<div class='fig figcenter fighighlight'>
+  <img src='/images/output_1_0.png'>
+  <figcaption>Fig 1. - Pole-placement controller for simple regulator </figcaption>
+</div>
 
 #### Pole placement: Set point tracking and steady state error
 
@@ -289,8 +291,10 @@ ylabel('Control')
 xlabel('time')
 ```
 
-
-![png](output_3_0.png)
+<div class='fig figcenter fighighlight'>
+  <img src='/images/output_3_0.png'>
+  <figcaption>Fig 2. - Pole-placement controller's performance for obtaining a fixed set-point </figcaption>
+</div>
 
 
 #### Pole placement: Steady state error with Integrator. 
@@ -361,8 +365,10 @@ ylabel('Control')
 xlabel('time')
 ```
 
-
-![png](output_5_0.png)
+<div class='fig figcenter fighighlight'>
+  <img src='/images/output_5_0.png'>
+  <figcaption>Fig 3. - Pole-placement controller's performance improves with addition of integrator state term. </figcaption>
+</div>
 
 
 From simulations above, it can be seen that the error between the desired and actual states go to zero, and performance is much better than the case when the integrator was not used as an additional state. However, note that the amplitude of the required control signal is very high at start \\( 100 \\), and this control has to be achieved at the start. 
@@ -418,8 +424,11 @@ err1 = x(:,1)-sin(w*t);
 
 ```
 
+<div class='fig figcenter fighighlight'>
+  <img src='/images/output_7_0.png'>
+  <figcaption>Fig 4. - Pole-placement controller's performance for tracking a time-varying signal. </figcaption>
+</div>
 
-![png](output_7_0.png)
 
 
 Simulation results indicate that the error between the desired and actual state values is high, and the tracking performance is poor. The required control for this process is also high, and as before starts off at a non-zero value. For set point tracking, we were able to append the states with integral of error, and improve performance. Lets investigate if the same trick helps improve performance for tracking time-varying signals.
@@ -468,8 +477,10 @@ axis([0 25 -10 10])
 
 ```
 
-
-![png](output_9_0.png)
+<div class='fig figcenter fighighlight'>
+  <img src='/images/output_9_0.png'>
+  <figcaption>Fig 4. - Pole-placement controller's performance for tracking a time-varying signal improves by adding an integrator term to state space. </figcaption>
+</div>
 
 
 From simulations above, the tracking performance has significantly improved. However, the control still starts at a non-zero value. Most controllers cannot apply a non-zero control value when they start from idle conditions, further, most controllers have limits on how large control signal they can apply. 
@@ -516,7 +527,10 @@ legend('commanded','actual')
 ```
 
 
-![png](output_12_0.png)
+<div class='fig figcenter fighighlight'>
+  <img src='/images/output_12_0.png'>
+  <figcaption>Fig 5. - Pole-placement controller performs well under saturation if error between commanded and maximum value is not large. </figcaption>
+</div>
 
 
 
@@ -549,9 +563,10 @@ legend('commanded','actual')
 %axis([0 25 -10 10])
 ```
 
-
-![png](output_13_0.png)
-
+<div class='fig figcenter fighighlight'>
+  <img src='/images/output_13_0.png'>
+  <figcaption>Fig 6. - Pole-placement controller performs poorly under saturation if error between commanded and maximum value is large. </figcaption>
+</div>
 
 
 ```matlab
@@ -585,8 +600,11 @@ axis([0 25 -10 10])
 
 ```
 
+<div class='fig figcenter fighighlight'>
+  <img src='/images/output_14_0.png'>
+  <figcaption>Fig 7. - Pole-placement controller performs well for tracking under saturation if error between commanded and maximum value is not large. </figcaption>
+</div>
 
-![png](output_14_0.png)
 
 
 ### 2. Actuator dynamics
@@ -650,12 +668,12 @@ max(x(:,4)')
 ```
 
 
-![png](output_16_0.png)
+<div class='fig figcenter fighighlight'>
+  <img src='/images/output_16_0.png'>
+  <figcaption>Fig 8. - Pole-placement controller with actuator dynamics gives control signals much smaller in magnitude, and they start from 0.</figcaption>
+</div>
 
 
-    ans =
-    
-       56.9727
 
 
 
@@ -690,9 +708,10 @@ err2 = x(:,2)-sin(w*t);
 %axis([0 25 -10 10])
 ```
 
-
-![png](output_17_0.png)
-
+<div class='fig figcenter fighighlight'>
+  <img src='/images/output_17_0.png'>
+  <figcaption>Fig 9. - Pole-placement controller with actuator dynamics gives control signals much smaller in magnitude, and they start from 0, which assuring good tracking performance.</figcaption>
+</div>
 
 Simulation results above indicate that by using actuator dynamics, a slightly poorer performance is achieved, however, the commanded control inputs are not large, and more importantly obey first order actuator dynamics. 
 
@@ -701,6 +720,4 @@ Simulation results above indicate that by using actuator dynamics, a slightly po
 In this session, we studied controllability, and went over applications of one pole-placement based controller synthesis method. By choosing the eigenvalues (poles) of the system carefully, it is possible to make the controller track a desired behavior.  However, we havent discussed how to choose the appropriate eigenvalues, and the resulting controller gain matrix. In the next session, we will go over the concepts of optimaility and optimal control, and develop optimality conditions that can be used to derive gains for optimal control law.
 
 
-```matlab
 
-```
