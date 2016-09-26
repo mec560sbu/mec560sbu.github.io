@@ -56,7 +56,7 @@ legend('Position: High K','Position: Low K')
 
 
 <div class='fig figcenter fighighlight'>
-  <img src="/images/output_1_1.png",width=400, height=400>
+  <img src="/images/output_1_1.png">
 </div>
 
 
@@ -267,12 +267,12 @@ legend('Position','Velocity')
 
 
 <div class='fig figcenter fighighlight'>
-  <img src="images/output_4_0.png",width=400, height=400)>
+  <img src="/images/output_4_0.png">
 </div>
 
 
 <div class='fig figcenter fighighlight'>
-  <img src="images/output_4_1.png",width=400, height=400)>
+  <img src="/images/output_4_1.png">
 </div>
 
 
@@ -331,12 +331,12 @@ legend('Position: High K','Position: Low K','Position: Opt K','Position: Fixed t
 ```
 
 <div class='fig figcenter fighighlight'>
-  <img src="images/output_8_0.png",width=400, height=400)>
+  <img src="/images/output_8_0.png">
 </div>
 
 
 <div class='fig figcenter fighighlight'>
-  <img src="images/output_8_1.png",width=400, height=400)>
+  <img src="/images/output_8_1.png">
 </div>
 
 
@@ -536,7 +536,7 @@ xlabel('time')
 
 
 <div class='fig figcenter fighighlight'>
-  <img src="images/output_10_0.png",width=400, height=400>
+  <img src="/images/output_10_0.png">
 </div>
 
 
@@ -544,7 +544,7 @@ For sufficiently large time to completion, infinite-time solution and finite-tim
 
 
 <div class='fig figcenter fighighlight'>
-  <img src="images/fig_DP_LQR_20.png",width=400, height=400>
+  <img src="/images/fig_DP_LQR_20.png">
 <figcaption> Fig 1. - Finite time vs infinite time LQR solution are equivalent for large time. </figcaption>
 </div>
 
@@ -582,7 +582,7 @@ Consider the problem of finding the shortest path between the target and and any
 
 
 <div class='fig figcenter fighighlight'>
-  <img src="images/DynProg_Problem.png",width=400, height=400>
+  <img src="/images/DynProg_Problem.png">
 <figcaption> Fig 2. - Dynamic programming set up </figcaption>
 </div>
 
@@ -590,7 +590,7 @@ Consider the problem of finding the shortest path between the target and and any
 In the example above, its difficult to compute optimal path starting from an initial condition. However, it is much easier to compute cost-to-go if we start from the goal, and step backwards. After the first step, the cells above and below goal have a cost-to-go of 1. 
 
 <div class='fig figcenter fighighlight'>
-  <img src="images/DynProg_Problem1.png",width=400, height=400>
+  <img src="/images/DynProg_Problem1.png">
 <figcaption> Fig 3. - Cost-to-go after 1 step back </figcaption>
 </div>
 
@@ -600,17 +600,18 @@ In the example above, its difficult to compute optimal path starting from an ini
 
 We can carry on this step for next 4 cycles, at which time, the cost-to-go associated with each cell looks as follows. Note, the cells above and to the right of cell corresponding to 5-points both have a score of 6. 
 
-<figure>
-  <img src="images/DynProg_Problem2.png",width=300, height=200)>
+
+<div class='fig figcenter fighighlight'>
+  <img src="/images/DynProg_Problem2.png">
   <figcaption> Fig 4. - Cost-to-go after 2 steps back</figcaption>
-</figure>
+</div>
+
 
 The cost-to-go map for target location is, 
-
-<figure>
-  <img src="images/DynProg_Problem3.png",width=300, height=200)>
+<div class='fig figcenter fighighlight'>
+  <img src="/images/DynProg_Problem3.png">
   <figcaption> Fig 5. - Cost-to-go after 3 step back</figcaption>
-</figure>
+</div>
 
 
 Once we have the cost-to-go for the grid-goal configuration, we can start at any point on the grid and reach the goal by following the path that minimizes the sum of action (1) and cost-to-go. The algorithm performed above is dynamic programming. 
