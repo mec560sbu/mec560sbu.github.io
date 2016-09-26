@@ -817,7 +817,7 @@ xlabel('time')
 ```
 
 <figure>
-  <img src="images/output_14_0.png",width=400, height=400)>
+  <img src="images/output_14_0_2.png",width=400, height=400)>
 </figure>
 
 
