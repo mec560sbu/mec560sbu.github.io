@@ -51,12 +51,12 @@ legend('Position: High K','Position: Low K')
 
 
 <div class='fig figcenter fighighlight'>
-  <img src="images/output_1_0_0.png",width=400, height=400)>
+  <img src="images/output_1_0_0.png",width=400, height=400>
 </div>
 
 
 <div class='fig figcenter fighighlight'>
-  <img src="images/output_1_1.png",width=400, height=400)>
+  <img src="images/output_1_1.png",width=400, height=400>
 </div>
 
 
@@ -536,7 +536,7 @@ xlabel('time')
 
 
 <div class='fig figcenter fighighlight'>
-  <img src="images/output_10_0.png",width=400, height=400)>
+  <img src="images/output_10_0.png",width=400, height=400>
 </div>
 
 
@@ -544,7 +544,7 @@ For sufficiently large time to completion, infinite-time solution and finite-tim
 
 
 <div class='fig figcenter fighighlight'>
-  <img src="images/fig_DP_LQR_20.png",width=400, height=400)>
+  <img src="images/fig_DP_LQR_20.png",width=400, height=400>
 <figcaption> Fig 1. - Finite time vs infinite time LQR solution are equivalent for large time. </figcaption>
 </div>
 
@@ -580,17 +580,22 @@ Therefore, the task of solving optimal control reduces to finding the cost-to-go
 
 Consider the problem of finding the shortest path between the target and and any start position on the grid in the figure below. We assume that we can move only left, right, up and down, and each action costs us 1 point. 
 
-<figure>
-  <img src="images/DynProg_Problem.png",width=300, height=200)>
-  <figcaption> Fig 2. - Dynamic programming set up </figcaption>
-</figure>
+
+<div class='fig figcenter fighighlight'>
+  <img src="images/DynProg_Problem.png",width=400, height=400>
+<figcaption> Fig 2. - Dynamic programming set up </figcaption>
+</div>
+
 
 In the example above, its difficult to compute optimal path starting from an initial condition. However, it is much easier to compute cost-to-go if we start from the goal, and step backwards. After the first step, the cells above and below goal have a cost-to-go of 1. 
 
-<figure>
-  <img src="images/DynProg_Problem1.png",width=300, height=200)>
-  <figcaption> Fig 3. - Cost-to-go after 1 step back </figcaption>
-</figure>
+<div class='fig figcenter fighighlight'>
+  <img src="images/DynProg_Problem1.png",width=400, height=400>
+<figcaption> Fig 3. - Cost-to-go after 1 step back </figcaption>
+</div>
+
+
+
 
 
 We can carry on this step for next 4 cycles, at which time, the cost-to-go associated with each cell looks as follows. Note, the cells above and to the right of cell corresponding to 5-points both have a score of 6. 
