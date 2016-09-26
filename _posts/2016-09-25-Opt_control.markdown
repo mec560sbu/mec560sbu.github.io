@@ -54,10 +54,14 @@ legend('Position: High K','Position: Low K')
   <img src='/images/output_1_0_0.png'>
 </div>
 
+<div class='fig figcenter fighighlight'>
+  <img src='/images/output_1_0_0.png'>
+</div>
 
 <div class='fig figcenter fighighlight'>
-  <img src="/images/output_1_1.png">
+  <img src='/images/output_1_1.png'>
 </div>
+
 
 
 
