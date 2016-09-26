@@ -51,12 +51,12 @@ legend('Position: High K','Position: Low K')
 
 
 <div class='fig figcenter fighighlight'>
-  <img src="images/output_1_0_0.png">
+  <img src='/images/output_1_0_0.png'>
 </div>
 
 
 <div class='fig figcenter fighighlight'>
-  <img src="images/output_1_1.png",width=400, height=400>
+  <img src="/images/output_1_1.png",width=400, height=400>
 </div>
 
 
