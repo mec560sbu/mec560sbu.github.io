@@ -7,7 +7,7 @@ permalink: tutorials
 
 #### Tutorials for control
 
-This page is compilation of all the course notes of MEC560. 
+This page is compilation of all the course notes of MEC560.
 
 1.  [Linear Algebra review](https://mec560sbu.github.io/2016/08/29/LinAlg_Review_Mbook/)
 2. [Least-square fitting using matrix derivatives](https://mec560sbu.github.io/2016/08/29/Least_SQ_Fitting/)

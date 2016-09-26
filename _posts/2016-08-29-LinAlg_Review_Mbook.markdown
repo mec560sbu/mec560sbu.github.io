@@ -7,7 +7,7 @@ date:   2016-08-29 11:00:00
 mathjax: true
 ---
 
-###### Vivek Yadav
+##### Vivek Yadav, PhD
 
 This set of notes presents a brief review of Linear Algebra concepts that will be used to develop Control Systems. We will first go over definitions and properties of vector, vector spaces, matrices, etc. 
 
