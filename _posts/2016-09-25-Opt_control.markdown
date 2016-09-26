@@ -50,13 +50,15 @@ legend('Position: High K','Position: Low K')
 ```
 
 
-<figure>
+<div class='fig figcenter fighighlight'>
   <img src="images/output_1_0_0.png",width=400, height=400)>
-</figure>
+</div>
 
-<figure>
+
+<div class='fig figcenter fighighlight'>
   <img src="images/output_1_1.png",width=400, height=400)>
-</figure>
+</div>
+
 
 
 
@@ -263,14 +265,18 @@ legend('Position','Velocity')
 
 ```
 
-<figure>
+
+<div class='fig figcenter fighighlight'>
   <img src="images/output_4_0.png",width=400, height=400)>
-</figure>
+</div>
 
 
-<figure>
+<div class='fig figcenter fighighlight'>
   <img src="images/output_4_1.png",width=400, height=400)>
-</figure>
+</div>
+
+
+
 
 
 Note the magnitude of control signal is less than 5 units. The strategy is simple, to go down until half point using a linearly increasing control, and then slow down follwing the same linear control shape. None of the PID controls achieve this, further, the required control signals in PID control is of the order of 100s. 
@@ -324,14 +330,17 @@ plot(t,X_high(:,1),t,X_low(:,1),t,X_opt(:,1),t_dis,X_eul(1,:))
 legend('Position: High K','Position: Low K','Position: Opt K','Position: Fixed time')
 ```
 
-
-<figure>
+<div class='fig figcenter fighighlight'>
   <img src="images/output_8_0.png",width=400, height=400)>
-</figure>
+</div>
 
-<figure>
+
+<div class='fig figcenter fighighlight'>
   <img src="images/output_8_1.png",width=400, height=400)>
-</figure>
+</div>
+
+
+
 
 
 Plots above show that the optimal controller drives errors to zero faster and the required control signal is smaller. Optimal controller can be synthesized for discrete systems also.
@@ -524,16 +533,21 @@ legend('DyP','LQR')
 ylabel('velocity')
 xlabel('time')
 ```
-<figure>
+
+
+<div class='fig figcenter fighighlight'>
   <img src="images/output_10_0.png",width=400, height=400)>
-</figure>
+</div>
+
 
 For sufficiently large time to completion, infinite-time solution and finite-time LQR give similar control signals, however, when the final time is kept fixed, the infinite-time approach fails. Figure below present comparison of finite-time and infinite-time outputs for large final time. As can be seen, the controller performances are equivalent in the two cases. 
 
-<figure>
-  <img src="images/fig_DP_LQR_20.png",width=500, height=400)>
-  <figcaption> Fig 1. - Finite time vs infinite time LQR solution are equivalent for large time. </figcaption>
-</figure>
+
+<div class='fig figcenter fighighlight'>
+  <img src="images/fig_DP_LQR_20.png",width=400, height=400)>
+<figcaption> Fig 1. - Finite time vs infinite time LQR solution are equivalent for large time. </figcaption>
+</div>
+
 
 
 *** Note: LQR solution using MATLAB's 'care' or 'dare' commands are applicable only for infinite time problems. ***
@@ -1170,6 +1184,6 @@ Below are some practical guidelines for desgining optimization routines,
 
 ### Conclusion
 
-In this lesson we went over some concepts of optimal control. We saw how to develop optimal control for linear systems, then looked into designing optimal control under state and control constraints using multiple shooting method. Multiple shooting has one disadvantage that we need to define velocity and position both, which results in \\(2 N_grid \times N_{position}\\) variables. However, we did not impose any strict conditions on the state variables. If we approximated postion variables by smooth polynomials whose derivatives are equal at knot points, then the velocity variables are derivative of position variables, and one set of dynamic constraints are satisfied. Therefore, only additional constraint left to satisfy is the second order condition relating acceleration to position and velocity variables. This technique is called direct collocation, which we will discuss in the next class. 
+In this lesson we went over some concepts of optimal control. We saw how to develop optimal control for linear systems, then looked into designing optimal control under state and control constraints using multiple shooting method. Multiple shooting has one disadvantage that we need to define velocity and position both, which results in \\(2 N_{grid} \times N_{position}\\) variables. However, we did not impose any strict conditions on the state variables. If we approximated postion variables by smooth polynomials whose derivatives are equal at knot points, then the velocity variables are derivative of position variables, and one set of dynamic constraints are satisfied. Therefore, only additional constraint left to satisfy is the second order condition relating acceleration to position and velocity variables. This technique is called direct collocation, which we will discuss in the next class. 
 
 
