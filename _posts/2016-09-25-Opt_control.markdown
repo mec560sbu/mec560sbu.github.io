@@ -652,7 +652,7 @@ Consider the task of obtaining the shortest path between a desired and final pos
 
 
 <div class='fig figcenter fighighlight'>
-  <img src="/images/DynProg_Obstacle.png",width=400, height=400)>
+  <img src="/images/DynProg_Obstacle.png",width=400, height=400>
   <figcaption> Fig 6. - Cost-to-go after 3 step back</figcaption>
 </div>
 
@@ -876,7 +876,7 @@ Conditions of optimality are defined as two point boundary value problems where 
 
 
 <div class='fig figcenter fighighlight'>
-<img src="/images/di_min_time_ln_X21.gif",width=400, height=400)>
+  <img src="/images/di_min_time_ln_X21.gif",width=400, height=400)>
   <figcaption> Fig 11. - Progression of states in multiple shooting method. </figcaption>
 </div>
 
