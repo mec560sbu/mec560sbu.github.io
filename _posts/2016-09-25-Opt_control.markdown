@@ -652,7 +652,7 @@ Consider the task of obtaining the shortest path between a desired and final pos
 
 
 <div class='fig figcenter fighighlight'>
-  <img src="/images/DynProg_Obstacle.png",width=400, height=400>
+  <img src="/images/DynProg_Obstacle.png">
   <figcaption> Fig 6. - Cost-to-go after 3 step back</figcaption>
 </div>
 
@@ -662,13 +662,13 @@ Consider the task of obtaining the shortest path between a desired and final pos
 The cost-to-go evolves as shown in the animation below. As can be seen, all the regions corresponding to the obstacles are very high values, and regions closer to the target have lower values. 
 
 <div class='fig figcenter fighighlight'>
-  <img src="/images/Value_growth_dyn.gif",width=400, height=400)>
+  <img src="/images/Value_growth_dyn.gif">
   <figcaption> Fig 7. - Cost-to-go after 3 step back</figcaption>
 </div>
 
 
 <div class='fig figcenter fighighlight'>
-	<img src="/images/Obs_RL.gif",width=400, height=400)>
+	<img src="/images/Obs_RL.gif">
   <figcaption> Fig 8. - Cost-to-go after 3 step back</figcaption>
 </div>
 
@@ -678,12 +678,12 @@ The same ideas of dynamic programming can be applied in reinforcement learning a
 
 
 <div class='fig figcenter fighighlight'>
-	<img src="/images/Value_RL.gif",width=400, height=400)>
+	<img src="/images/Value_RL.gif">
   <figcaption> Fig 9. - Cost-to-go after 3 step back</figcaption>
 </div>
 
 <div class='fig figcenter fighighlight'>
-	<img src="/images/Obs_Avoidance_dyn.gif",width=400, height=400)>
+	<img src="/images/Obs_Avoidance_dyn.gif">
   <figcaption> Fig 10. - Cost-to-go after 3 step back</figcaption>
 </div>
 
@@ -826,7 +826,7 @@ xlabel('time')
 
 
 <div class='fig figcenter fighighlight'>
-	  <img src="/images/output_14_0_2.png",width=400, height=400)>
+	  <img src="/images/output_14_0_2.png">
 </div>
 
 
@@ -1058,7 +1058,7 @@ Lets consider the a  example of designing control for a double integrator whose 
 
 
 <div class='fig figcenter fighighlight'>
-<img src="/images/phase_plot_bangbang2.png",width=400, height=400)>
+<img src="/images/phase_plot_bangbang2.png">
   <figcaption> Fig 13. - Minimum time control for double integrator. </figcaption>
 </div>
 
@@ -1118,13 +1118,13 @@ end
 
 
 <div class='fig figcenter fighighlight'>
-	<img src="/images/Opt_control_bangbang.png",width=400, height=400)>
+	<img src="/images/Opt_control_bangbang.png">
   <figcaption> Fig 14. - Minimum time control for double integrator. </figcaption>
 </div>
 
 
 <div class='fig figcenter fighighlight'>
-	<img src="/images/Opt_states_bangbang.png",width=400, height=400)>
+	<img src="/images/Opt_states_bangbang.png">
   <figcaption> Fig 15. - Minimum time states for double integrator. </figcaption>
 </div>
 
