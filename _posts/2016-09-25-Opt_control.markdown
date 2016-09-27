@@ -826,7 +826,7 @@ xlabel('time')
 
 
 <div class='fig figcenter fighighlight'>
-	  <img src="images/output_14_0_2.png",width=400, height=400)>
+	  <img src="/images/output_14_0_2.png",width=400, height=400)>
 </div>
 
 
@@ -876,7 +876,7 @@ Conditions of optimality are defined as two point boundary value problems where 
 
 
 <div class='fig figcenter fighighlight'>
-<img src="images/di_min_time_ln_X21.gif",width=400, height=400)>
+<img src="/images/di_min_time_ln_X21.gif",width=400, height=400)>
   <figcaption> Fig 11. - Progression of states in multiple shooting method. </figcaption>
 </div>
 
@@ -1044,7 +1044,7 @@ cost = vx^2+vy^2;
 
 
 <div class='fig figcenter fighighlight'>
-<img src="images/cannon.gif",width=400, height=200)>
+<img src="/images/cannon.gif",width=400, height=200)>
   <figcaption> Fig 12. - Cannon optimal shooting problem. </figcaption>
 </div>
 
@@ -1058,7 +1058,7 @@ Lets consider the a  example of designing control for a double integrator whose 
 
 
 <div class='fig figcenter fighighlight'>
-<img src="images/phase_plot_bangbang2.png",width=400, height=400)>
+<img src="/images/phase_plot_bangbang2.png",width=400, height=400)>
   <figcaption> Fig 13. - Minimum time control for double integrator. </figcaption>
 </div>
 
@@ -1118,13 +1118,13 @@ end
 
 
 <div class='fig figcenter fighighlight'>
-	<img src="images/Opt_control_bangbang.png",width=400, height=400)>
+	<img src="/images/Opt_control_bangbang.png",width=400, height=400)>
   <figcaption> Fig 14. - Minimum time control for double integrator. </figcaption>
 </div>
 
 
 <div class='fig figcenter fighighlight'>
-	<img src="images/Opt_states_bangbang.png",width=400, height=400)>
+	<img src="/images/Opt_states_bangbang.png",width=400, height=400)>
   <figcaption> Fig 15. - Minimum time states for double integrator. </figcaption>
 </div>
 
@@ -1193,12 +1193,12 @@ end
 ```
 
 <div class='fig figcenter fighighlight'>
-  <img src="images/Opt_control_bangbang_lim.png",width=400, height=400)>
+  <img src="/images/Opt_control_bangbang_lim.png",width=400, height=400)>
   <figcaption> Fig 16. - Minimum time control for double integrator with velocity limit constraint. </figcaption>
 </div>
 
 <div class='fig figcenter fighighlight'>
-  <img src="images/Opt_state_bangbang_lim.png",width=400, height=400)>
+  <img src="/images/Opt_state_bangbang_lim.png",width=400, height=400)>
   <figcaption> Fig 17. - Minimum time states for double integrator with velocity limit constraint. </figcaption>
 </div>
 
