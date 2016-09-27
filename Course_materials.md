@@ -21,6 +21,8 @@ All documents for the course page are available on course repository on [github]
 |       9/12/2016    |    Lagrange Methods, System dynamics, state space models and their solution | [System dyamics and state space models](2016/09/11/Systems_Dynamics/),[Equations of motion of 2R manipulator](https://mec560sbu.github.io/2016/08/30/2R_EOM_dynamics_example/),[Solution of state space models](2016/09/11/Solution_Systems_State_Space/) [Slides: System Dynamics](https://mec560sbu.github.io/Prersentations/Pres_SystemDynamics.html#/), [Slides: State Space Solution](https://mec560sbu.github.io/Prersentations/State_space_solutions.html#/)| 
 |       |                       |            |
 |      9/19/2016    |    Controllability and Observability, Controller/observer synthesis | [Controllability](https://mec560sbu.github.io/2016/09/19/Controllability/),[Control Synthesis](https://mec560sbu.github.io/2016/09/19/Control_synthesis/),[Slides: Controllability and Control synthesis](https://mec560sbu.github.io/Prersentations/pres_Controllability_and_Control.html#/),[Assignment 2](https://mec560sbu.github.io/Assignments2016/MEC560_Assignment2_DUE_10032016.html)                 | 
+|       |                       |            |
+|      9/26/2016    |    Optimal control, dynamic programming and multiple shooting | [ Optimal control, dynamic programming and multiple shooting](https://mec560sbu.github.io/2016/09/25/Opt_control/),[Slides Optimal control](https://mec560sbu.github.io/Prersentations/pres_OptControl.html#/)                 | 
 
 
 
