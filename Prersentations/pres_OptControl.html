@@ -3007,7 +3007,7 @@ ySNpXHo+CAAAAABJRU5ErkJggg==
 <li>Define a cost-to-go function at each state value. Once this cost-to-go map is available</li>
 <li>Optimal control policy can be obtained by moving from one state to another state that minimizes the cost to go from that state</li>
 </ul>
-$$ J(x[k],u[k]) = \underbrace{min}_{u[k]} \left[ L(x[k] , u[k], x[k+1]) + J(x[k+1],u[k+1])  \right]$$<p></p>
+$$ J(x[k]) = \underbrace{min}_{u[k]} \left[ L(x[k] , u[k], x[k+1]) + J(x[k+1])  \right]$$<p></p>
 <ul>
 <li>Solve for control backwards starting from final conditions</li>
 </ul>
@@ -3132,7 +3132,7 @@ $$ J(x[k],u[k]) = \underbrace{min}_{u[k]} \left[ L(x[k] , u[k], x[k+1]) + J(x[k+
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Dynamic-programming:-Cost-to-go">Dynamic programming: Cost-to-go<a class="anchor-link" href="#Dynamic-programming:-Cost-to-go">&#182;</a></h3><p>Cost-go-approximation</p>
-$$ J(x[k],u[k]) = \underbrace{min}_{u[k]} \left[ L(x[k] , u[k], x[k+1]) + J(x[k+1],u[k+1])  \right]$$<p></p>
+$$ J(x[k]) = \underbrace{min}_{u[k]} \left[ L(x[k] , u[k], x[k+1]) + J(x[k+1])  \right]$$<p></p>
 
 </div>
 </div>

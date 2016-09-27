@@ -1193,12 +1193,12 @@ end
 ```
 
 <div class='fig figcenter fighighlight'>
-  <img src="/images/Opt_control_bangbang_lim.png",width=400, height=400)>
+  <img src="/images/Opt_control_bangbang_lim.png">
   <figcaption> Fig 16. - Minimum time control for double integrator with velocity limit constraint. </figcaption>
 </div>
 
 <div class='fig figcenter fighighlight'>
-  <img src="/images/Opt_state_bangbang_lim.png",width=400, height=400)>
+  <img src="/images/Opt_state_bangbang_lim.png">
   <figcaption> Fig 17. - Minimum time states for double integrator with velocity limit constraint. </figcaption>
 </div>
 
