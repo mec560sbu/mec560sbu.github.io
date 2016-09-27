@@ -194,11 +194,11 @@ $$ \dot{P} X + P (AX - B R^{-1}B^T PX) = - A^T PX - Q X. $$
 
 Rearranging,
 
-$$ \dot{P} X  = -PAX - A^T PX  + B R^{-1}B^T PX - Q X. $$
+$$ \dot{P} X  = -PAX - A^T PX  + P B R^{-1}B^T PX - Q X. $$
 
 Expression above holds for all values of \\(X \\), therefore, 
 
-$$ - \dot{P}  = PA + A^T P  - B R^{-1}B^T P + Q X. $$
+$$ - \dot{P}  = PA + A^T P  - P B R^{-1}B^T P + Q X. $$
 
 with boundary condition \\( P_f  = S \\). The equation above is called Riccati equation, and solving it gives the optimal solution. 
 
@@ -295,7 +295,7 @@ $$ J(u) = \frac{1}{2} \int_{t=0}^{\infty} (X^TQX + u^T R u) dt . $$
 
 In steady state condition, \\( \dot{P} = 0 \\). Therefore, the Riccati equation becomes,
 
-$$ 0  = PA + A^T P  - B R^{-1}B^T P + Q X. $$
+$$ 0  = PA + A^T P  - P B R^{-1}B^T P + Q X. $$
 
 The equation above is algebraic and is a quadratic matrix expression in \\( P \\). The solution to equation above can be obtained using MATLAB's 'care' function. Example below shows how to use MATLAB's 'care' function to calculate optimal gain values that minimize the cost function above. 
 
@@ -650,19 +650,19 @@ Below is result of applying the algorithm above to
 Consider the task of obtaining the shortest path between a desired and final position, given the configuration of obstacles in the environment. We can apply a similar technique as above. 
 
 <figure>
-  <img src="images/DynProg_Obstacle.png",width=400, height=400)>
+  <img src="/images/DynProg_Obstacle.png",width=400, height=400)>
   <figcaption> Fig 6. - Cost-to-go after 3 step back</figcaption>
 </figure>
 
 The cost-to-go evolves as shown in the animation below. As can be seen, all the regions corresponding to the obstacles are very high values, and regions closer to the target have lower values. 
 
 <figure>
-  <img src="images/Value_growth_dyn.gif",width=400, height=400)>
+  <img src="/images/Value_growth_dyn.gif",width=400, height=400)>
   <figcaption> Fig 7. - Cost-to-go after 3 step back</figcaption>
 </figure>
 
 <figure>
-  <img src="images/Obs_RL.gif",width=400, height=400)>
+  <img src="/images/Obs_RL.gif",width=400, height=400)>
   <figcaption> Fig 8. - Cost-to-go after 3 step back</figcaption>
 </figure>
 
