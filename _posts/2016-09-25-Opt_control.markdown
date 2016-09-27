@@ -649,37 +649,44 @@ Below is result of applying the algorithm above to
 
 Consider the task of obtaining the shortest path between a desired and final position, given the configuration of obstacles in the environment. We can apply a similar technique as above. 
 
-<figure>
+
+
+<div class='fig figcenter fighighlight'>
   <img src="/images/DynProg_Obstacle.png",width=400, height=400)>
   <figcaption> Fig 6. - Cost-to-go after 3 step back</figcaption>
-</figure>
+</div>
+
+
+
 
 The cost-to-go evolves as shown in the animation below. As can be seen, all the regions corresponding to the obstacles are very high values, and regions closer to the target have lower values. 
 
-<figure>
+<div class='fig figcenter fighighlight'>
   <img src="/images/Value_growth_dyn.gif",width=400, height=400)>
   <figcaption> Fig 7. - Cost-to-go after 3 step back</figcaption>
-</figure>
+</div>
 
-<figure>
-  <img src="/images/Obs_RL.gif",width=400, height=400)>
+
+<div class='fig figcenter fighighlight'>
+	<img src="/images/Obs_RL.gif",width=400, height=400)>
   <figcaption> Fig 8. - Cost-to-go after 3 step back</figcaption>
-</figure>
+</div>
 
 #### Dynamic programming in control vs reinforcement learning. 
 
 The same ideas of dynamic programming can be applied in reinforcement learning also. However, in reinforcement learning the objective is to maximize reward, and in control theory objective is to minimize cost. Below is algorithm for using reinforcement learning that maximizes the reward. 
 
 
-<figure>
-  <img src="images/Value_RL.gif",width=400, height=400)>
+<div class='fig figcenter fighighlight'>
+	<img src="/images/Value_RL.gif",width=400, height=400)>
   <figcaption> Fig 9. - Cost-to-go after 3 step back</figcaption>
-</figure>
+</div>
 
-<figure>
-  <img src="images/Obs_Avoidance_dyn.gif",width=400, height=400)>
+<div class='fig figcenter fighighlight'>
+	<img src="/images/Obs_Avoidance_dyn.gif",width=400, height=400)>
   <figcaption> Fig 10. - Cost-to-go after 3 step back</figcaption>
-</figure>
+</div>
+
 
 
 ### Dynamic programming for linear quadratic regulator control
@@ -817,9 +824,11 @@ ylabel('velocity')
 xlabel('time')
 ```
 
-<figure>
-  <img src="images/output_14_0_2.png",width=400, height=400)>
-</figure>
+
+<div class='fig figcenter fighighlight'>
+	  <img src="images/output_14_0_2.png",width=400, height=400)>
+</div>
+
 
 
 *** Note: Hamilton Jacobi Bellman equation is the continuous-time analog of dynamic programming for discrete systems. The conditions for optimality can be obtained using this equation too. ***
@@ -865,10 +874,13 @@ Conditions of optimality are defined as two point boundary value problems where 
 
 
 
-<figure>
-  <img src="images/di_min_time_ln_X21.gif",width=400, height=400)>
+
+<div class='fig figcenter fighighlight'>
+<img src="images/di_min_time_ln_X21.gif",width=400, height=400)>
   <figcaption> Fig 11. - Progression of states in multiple shooting method. </figcaption>
-</figure>
+</div>
+
+
 
 
 
@@ -1030,20 +1042,28 @@ vy = X(3);
 cost = vx^2+vy^2;
 ```
 
-<figure>
-  <img src="images/cannon.gif",width=400, height=200)>
+
+<div class='fig figcenter fighighlight'>
+<img src="images/cannon.gif",width=400, height=200)>
   <figcaption> Fig 12. - Cannon optimal shooting problem. </figcaption>
-</figure>
+</div>
+
+
 
 ### Bang-bang control
 
 Lets consider the a  example of designing control for a double integrator whose control can vary between -1 and 1. If we want to reach from some starting point say 0 to 10, the fastest control solution is to apply -1 control for half the time, and then apply +1. This control can also be indicated by a phase-plot between position and velocity. The red lines indicate trajectory for the case when control is 1, and black lines indicate trajectories when control is -1. The states move on contour lines in clockwise directions. The least-time cost for a particle starting at 0 to go to 10 is given by the green line. 
 
 
-<figure>
-  <img src="images/phase_plot_bangbang2.png",width=400, height=400)>
+
+
+<div class='fig figcenter fighighlight'>
+<img src="images/phase_plot_bangbang2.png",width=400, height=400)>
   <figcaption> Fig 13. - Minimum time control for double integrator. </figcaption>
-</figure>
+</div>
+
+
+
 
 #### Problem formulation,
 
@@ -1094,16 +1114,21 @@ end
 ```
 
 
-<figure>
-  <img src="images/Opt_control_bangbang.png",width=400, height=400)>
+
+
+
+<div class='fig figcenter fighighlight'>
+	<img src="images/Opt_control_bangbang.png",width=400, height=400)>
   <figcaption> Fig 14. - Minimum time control for double integrator. </figcaption>
-</figure>
+</div>
 
 
-<figure>
-  <img src="images/Opt_states_bangbang.png",width=400, height=400)>
+<div class='fig figcenter fighighlight'>
+	<img src="images/Opt_states_bangbang.png",width=400, height=400)>
   <figcaption> Fig 15. - Minimum time states for double integrator. </figcaption>
-</figure>
+</div>
+
+
 
 Plots above present results from optimization. The optimal control strategy that minimizes time of movement while obeying control constraints is one where you accelerate using maximum control, and decelerate using maximum control.  
 
@@ -1167,16 +1192,17 @@ for i = 1:(N_grid-1)
 end
 ```
 
-<figure>
+<div class='fig figcenter fighighlight'>
   <img src="images/Opt_control_bangbang_lim.png",width=400, height=400)>
   <figcaption> Fig 16. - Minimum time control for double integrator with velocity limit constraint. </figcaption>
-</figure>
+</div>
 
-
-<figure>
+<div class='fig figcenter fighighlight'>
   <img src="images/Opt_state_bangbang_lim.png",width=400, height=400)>
   <figcaption> Fig 17. - Minimum time states for double integrator with velocity limit constraint. </figcaption>
-</figure>
+</div>
+
+
 
 Plots above show how control policy and states evolve for the the case when velocity is constrained to be less than 1.5. The controller accelerates the particle to the velocity limit using maximum control, then maintains that velocity for some time, and decelerates using maximum decelerating control. 
 

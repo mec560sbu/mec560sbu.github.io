@@ -1541,7 +1541,7 @@ YII=
 <span class="k">function</span><span class="w"> </span>dPdt <span class="p">=</span><span class="w"> </span><span class="nf">mRiccati</span><span class="p">(</span>t, P, A, B, Q,R<span class="p">)</span><span class="w"></span>
 
 <span class="n">P</span> <span class="p">=</span> <span class="nb">reshape</span><span class="p">(</span><span class="n">P</span> <span class="p">,</span> <span class="nb">size</span><span class="p">(</span><span class="n">A</span><span class="p">));</span> <span class="c">%Convert from &quot;n^2&quot;-by-1 to &quot;n&quot;-by-&quot;n&quot;</span>
-<span class="n">dPdt</span> <span class="p">=</span> <span class="o">-</span><span class="p">(</span><span class="n">A</span><span class="p">.</span><span class="o">&#39;*</span><span class="n">P</span> <span class="o">+</span> <span class="n">P</span><span class="o">*</span><span class="n">A</span> <span class="o">-</span> <span class="n">P</span><span class="o">*</span><span class="n">B</span><span class="o">*</span><span class="n">B</span><span class="p">.</span><span class="o">&#39;*</span><span class="n">P</span> <span class="o">+</span> <span class="n">Q</span><span class="p">);</span> <span class="c">%Determine derivative</span>
+<span class="n">dPdt</span> <span class="p">=</span> <span class="o">-</span><span class="p">(</span><span class="n">A</span><span class="o">&#39;*</span><span class="n">P</span> <span class="o">+</span> <span class="n">P</span><span class="o">*</span><span class="n">A</span> <span class="o">-</span> <span class="n">P</span><span class="o">*</span><span class="n">B</span><span class="o">*</span><span class="n">B</span><span class="o">&#39;*</span><span class="n">P</span> <span class="o">+</span> <span class="n">Q</span><span class="p">);</span> <span class="c">%Determine derivative</span>
 <span class="n">dPdt</span> <span class="p">=</span> <span class="n">dPdt</span><span class="p">(:);</span> <span class="c">%Convert from &quot;n&quot;-by-&quot;n&quot; to &quot;n^2&quot;-by-1</span>
 
 <span class="c">%%% Function </span>
@@ -1583,7 +1583,7 @@ YII=
 <h3 id="Continuous-time-infinite-horizon,-Linear-quadratic-regulator">Continuous time infinite horizon, Linear quadratic regulator<a class="anchor-link" href="#Continuous-time-infinite-horizon,-Linear-quadratic-regulator">&#182;</a></h3><p>The cost function when time allowed to go to \( \infty \).</p>
 $$ J(u) = \frac{1}{2} \int_{t=0}^{\infty} (X^TQX + u^T R u) dt . $$<p></p>
 <p>In steady state condition, \( \dot{P} = 0 \). Therefore, the Riccati equation becomes,</p>
-$$ 0  = PA + A^T P  - B R^{-1}B^T P + Q X. $$<p>Equation above is called Algebraic Riccati equation.</p>
+$$ 0  = PA + A^T P  - PB R^{-1}B^T P + Q X. $$<p>Equation above is called Algebraic Riccati equation.</p>
 
 </div>
 </div>
@@ -3392,7 +3392,7 @@ $$ C_p(q_i,u_i)\leq 0 .  $$<p></p>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Nonlinear-programming:-quick-review">Nonlinear programming: quick review<a class="anchor-link" href="#Nonlinear-programming:-quick-review">&#182;</a></h3><p>As state above, we convert optimal control problem into a simpler task of identifying the knot-points, coefficient of polynomials or other parameters that define a state/control trajectory. This is a parameter optimization problem, and is much simpler than solving LQR equations. Say we want to minimize \( f(X) \), such that,</p>
-$$ A X \leq B , \text{ inequality constraint}$$$$ A_{eq} X = B_{eq} , \text{ equality constraint}$$$$ C X \leq 0 , \text{ inequality non-linear constraint}$$$$ C_{eq} X = B , \text{ equality non-linear constraint}$$$$ X_l \leq X \leq X_u. \text{Bounds} $$<p></p>
+$$ A X \leq B , \text{ inequality constraint}$$$$ A_{eq} X = B_{eq} , \text{ equality constraint}$$$$ C(X)  \leq 0 , \text{ inequality non-linear constraint}$$$$ C_{eq}(X)  = 0 , \text{ equality non-linear constraint}$$$$ X_l \leq X \leq X_u. \text{Bounds} $$<p></p>
 <p>Such problems can be solved using nonlinear solvers, such as <a href="http://www.mathworks.com/help/optim/ug/fmincon.html">fmincon</a>.</p>
 $$x = fmincon(fun,x0,A,b,Aeq,beq,lb,ub,nonlcon,options)$$
 </div>
