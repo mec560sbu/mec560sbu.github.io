@@ -1044,7 +1044,7 @@ cost = vx^2+vy^2;
 
 
 <div class='fig figcenter fighighlight'>
-<img src="/images/cannon.gif",width=400, height=200)>
+<img src="/images/cannon.gif">
   <figcaption> Fig 12. - Cannon optimal shooting problem. </figcaption>
 </div>
 
