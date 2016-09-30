@@ -876,7 +876,7 @@ Conditions of optimality are defined as two point boundary value problems where 
 
 
 <div class='fig figcenter fighighlight'>
-  <img src="/images/di_min_time_ln_X21.gif",width=400, height=400)>
+  <img src="/images/di_min_time_ln_X21.gif">
   <figcaption> Fig 11. - Progression of states in multiple shooting method. </figcaption>
 </div>
 
