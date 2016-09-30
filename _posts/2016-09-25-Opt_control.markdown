@@ -1052,7 +1052,7 @@ cost = vx^2+vy^2;
 
 ### Bang-bang control
 
-Lets consider the a  example of designing control for a double integrator whose control can vary between -1 and 1. If we want to reach from some starting point say 0 to 10, the fastest control solution is to apply -1 control for half the time, and then apply +1. This control can also be indicated by a phase-plot between position and velocity. The red lines indicate trajectory for the case when control is 1, and black lines indicate trajectories when control is -1. The states move on contour lines in clockwise directions. The least-time cost for a particle starting at 0 to go to 10 is given by the green line. 
+Lets consider the a  example of designing control for a double integrator whose control can vary between -1 and 1. If we want to reach from some starting point say 0 to 10, the fastest control solution is to apply 1 control for half the time, and then apply -1. This control can also be indicated by a phase-plot between position and velocity. The red lines indicate trajectory for the case when control is 1, and black lines indicate trajectories when control is -1. The states move on contour lines in clockwise directions. The least-time cost for a particle starting at 0 to go to 10 is given by the green line. 
 
 
 
