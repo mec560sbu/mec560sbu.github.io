@@ -155,11 +155,11 @@ $$ J(u) = \Phi(X_f) + \int_{t=0}^{t_f} L(t,X,u) dt . $$
 
 We can use trapezoid integration and integrate the above in an interval as 
 
-$$ J_{nlp} = \Phi(X_{N}) + \frac{1}{2}\sum_{k=1}^{N-1} \left( L(t_{k+1},X_{k+1},u_{k+1}) - L(t_k,X_k,u_k)  \right)(t_{k+1}-t_k) . $$ 
+$$ J_{nlp} = \Phi(X_{N}) + \frac{1}{2}\sum_{k=1}^{N-1} \left( L(t_{k+1},X_{k+1},u_{k+1}) + L(t_k,X_k,u_k)  \right)(t_{k+1}-t_k) . $$ 
 
 For the special case where we have linear quadratic regulator, with time points discretized evenly at intervals of \\( h \\), we have 
 
-$$ J_{nlp} = \Phi(X_{N}) + \frac{1}{2}\sum_{k=1}^{N-1} \left( X_{k+1}^T Q X_{k+1} + u_{k+1}^T R u_{k+1} +X_{k}^T Q X_{k} + u_{k}^T R u_{K+1} \right) h. $$ 
+$$ J_{nlp} = \Phi(X_{N}) + \frac{1}{2}\sum_{k=1}^{N-1} \left( X_{k+1}^T Q X_{k+1} + u_{k+1}^T R u_{k+1} +X_{k}^T Q X_{k} + u_{k}^T R u_{k} \right) h. $$ 
 
 
 #### 4. Define additional constraints
