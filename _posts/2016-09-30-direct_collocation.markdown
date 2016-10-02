@@ -553,6 +553,8 @@ It is important to frame the nonlinear programming problem appropriately. An ill
 
 In the last 2 classes we saw how to formulate optimal control problem. We derived necessary conditions that the optimal control needs to satisfy, and applied them to derive controllers for a specific case called linear quadratic regulator. We next looked into dynamic programming and shooting methods for computing optimal control, and finally went over direct collocation. We saw how to use GPOPS II to compute optimal control. There are several variations of optimal control problems, and GPOPS II is a very powerful tool to compute optimal control for such tasks. 
 
+
+
 ### Additional resources
 
 There are several other toolkits available to solve the trajectory optimization problems. Two particularly useful resources are on webpage of [Anil V Rao](http://www.anilvrao.com/). Dr Anil V Rao is the author of GPOPS II, and provided free license for use in MEC 560 class. 
