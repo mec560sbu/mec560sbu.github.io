@@ -140,7 +140,7 @@ $$ \dot{X} = \left[ \begin{array}{cc} 0 & 1 \\ 0 & 0 \end{array} \right] X + \le
 
 with measurement 
 
-    $$  y = C X . $$
+$$  y = C X . $$
     
 Observability matrix can be written as, 
 
