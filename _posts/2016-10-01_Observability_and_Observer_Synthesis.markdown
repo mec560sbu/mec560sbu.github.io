@@ -8,9 +8,7 @@ mathjax: true
 ---
 
 
-# Observability and Observer design
-
-#### Vivek Yadav, PhD
+### Vivek Yadav, PhD
 
 In previous classes we saw how to use pole-placement and optimal control techniques to design controllers for linear system under various constraints. One limitation of previous techniques was that we assumed that full-state information was available for us for design. However, we monitor a system using its measurements, and these measurements need not be the complete state vector. In most applications, the state vector is estimated based on measurements from the plant. This can be formally described as follows. Consider the system, 
 
