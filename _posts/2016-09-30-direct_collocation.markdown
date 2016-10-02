@@ -105,11 +105,11 @@ $$ X(0) = X_k $$
 
 $$ X(h) = X_{k+1} $$
 
-$$ \dot{X}(0) =  \dot{X}_{k} = f(X_k,u_k $$
+$$ \dot{X}(0) =  \dot{X}_{k} = f(X_k,u_k ) $$
 
-$$ \dot{X}(h) =  \dot{X}_{k+1} =f(X_{k+1},u_{k+1} $$
+$$ \dot{X}(h) =  \dot{X}_{k+1} =f(X_{k+1},u_{k+1} ) $$
 
-The same can be compiuted from the polynomial representations too. This gives us, 
+The same can be computed from the polynomial representations too. This gives us, 
 
 $$ \left[ \begin{array}{c}  X(0) \\ \dot{X}(0) \\ X(h) \\ \dot{X}(h) \end{array} \right] =  \left[ \begin{array}{cccc}  1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \\  1 & h & h^2 & h^3 \\ 0 & 1 & 2 h & 3 h^2 \end{array} \right]   \left[ \begin{array}{c}  a_{k,0} \\ a_{k,1} \\ a_{k,2} \\ a_{k,3} \end{array} \right]  $$ 
 
@@ -149,7 +149,7 @@ The last term in the expression above is implicit Hermite integration of system 
 
 #### 3. Express cost-function in terms of optimization parameters. 
 
-The next step is to ex the cost function, we can compute the cost function using various numerical integration (or quadrature) schemes. Say we choose to use trapezoid method, the cost function expressed as, 
+The next step is to approximate the cost function, we can compute the cost function using various numerical integration (or quadrature) schemes. Say we choose to use trapezoid method, the cost function expressed as, 
 
 $$ J(u) = \Phi(X_f) + \int_{t=0}^{t_f} L(t,X,u) dt . $$ 
 
