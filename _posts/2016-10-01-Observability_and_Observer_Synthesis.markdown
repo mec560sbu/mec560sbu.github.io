@@ -58,7 +58,7 @@ $$ \left[ \begin{array}{c}
   CA^{n-1}  \\
 \end{array} \right]}_{observability~matrix} x_0.$$
 
-It is possible to solve for \\(x_0\\) for a given measurement history only if the observability matrix of rank \\(n\\). 
+It is possible to solve for \\(x_0\\) for a given measurement history only if the observability matrix is of rank \\(n\\). 
 
 
 
@@ -72,7 +72,7 @@ and
 
 $$ y[k] = C x[k],$$
 
-Taking successive of the measurement, 
+Taking successive values of the measurement, 
 
 $$ \begin{array}{c} 
  y[0] = C x[0] ,\\
@@ -96,14 +96,14 @@ $$ \left[ \begin{array}{c}
   CA^{n-1}  \\
 \end{array} \right]}_{observability~matrix} x[0] .$$
 
-It is possible to solve for \\(x_0\\) for a given measurement history only if the observability matrix of rank \\(n\\).
+It is possible to solve for \\(x_0\\) for a given measurement history only if the observability matrix is of rank \\(n\\).
 
 
 Obsearvability is also expressed via a Grammian matrix Q, 
 
 $$ Q(T) =  \int_{0}^{T} e^{ A^T \lambda } C^T C  e^{A \lambda }    d\lambda .  $$
 
-If \\( P(T) \\) is non-singular for all \\( T\\) then the underlying dynamic system is observable. 
+If \\( Q(T) \\) is non-singular for all \\( T\\) then the underlying dynamic system is observable. 
 
 - Only \\(n\\) derivatives or discretizations are sufficient to determine conntrollability or observability for continuous or discrete systems because adding additional derivative or discretization equations do not increase the rank of either controllability or observability matrix. 
 
@@ -114,19 +114,21 @@ As rank of a matrix and its transpose are the same, we can use the matrix
 
 $$ \left[ \begin{array}{ccccc} C^T & A^T C^T & (A^T)^2 C^T & \dots & (A^T)^{n-1} C^T \end{array}  \right] $$
 
-to compute rank of the matrix. This matrix is the same as controllability matrix with \\( A \\) replaced by \\( A^T \\) and \\( B \\) replaced by \\( C^T \\). Observability matrix can be computed in MATLAB using 'obsv' command. 
+to compute rank of the observability matrix. This matrix is the same as controllability matrix with \\( A \\) replaced by \\( A^T \\) and \\( B \\) replaced by \\( C^T \\). Observability matrix can be computed in MATLAB using 'obsv' command. 
 
 
 
 ##### When do systems become unobservable?
 
-An unobservable system is more common than uncontrollable system. A system becomes unobservable a state variable is not measured and directly and is not fed back to those state variables that are measured. Consider the following control system, 
+An unobservable system is more common than uncontrollable system. A system becomes unobservable when a state variable is not measured directly and is not fed back to those state variables that are measured. Consider the following control system, 
 
 $$ \dot{x_1} = A_1 x_1 + B_1u $$ 
 
 $$ \dot{x_2} = A_{12} x_1 + A_{22} x_2 + B_2 u $$  
 
-with measurement \\(y = x_1\\). This system can only measure \\( x_1 \\) and altough it may be possible to control \\( x_2 \\) by applying appropriate control \\( u \\), design of such a control is impossible because there is no direct or indirect measure of \\(x_2\\).
+with measurement \\(y = x_1\\). This system can only measure \\( x_1 \\). \\(  x_2\\) cannot be measured because it does not feed into the dynamics of the measured state. It may be possible to control \\( x_2 \\) by applying appropriate control \\( u \\), design of such a control is impossible because there is no direct or indirect measure of \\(x_2\\). 
+
+*** The dynamics of a system when the measurements are zero is called zero dynamics. The states combinations that enter the zero-dynamics cannot be estimated. ***
 
 
 #### Detectability
@@ -336,7 +338,7 @@ We assume that we have a \\( n\\)-dimensional state vector and an \\( p (< n) \\
 
 #### 1. Transform system
 
-We aim to fine a transformation \\( P \\) such that after transformation \\( X = PZ \\), the system dynamics change as 
+We aim to find a transformation \\( P \\) such that after transformation \\( X = PZ \\), the system dynamics change as 
 
 $$ \dot{Z} = A_z Z + B_zu $$
 
@@ -350,7 +352,7 @@ $$ Z = \left[ \begin{array}{c} Z_1 \\ Z_2 \end{array} \right].  $$
 
 The transformation \\( P \\) can be found as follows, 
 
-1. Perform elementary column operations to find a nonsingulr matrix R of dimensions \\( p \times n \\) such that \\( CR = \left[ \begin{array}{cc} C_1 & 0 \end{array} \right] \\), where \\( C_1 \\) is an invertible \\( p \\) dimensional matrix. 
+1. Perform elementary column operations to find a nonsingulr matrix R of dimensions \\( n \times n \\) such that \\( CR = \left[ \begin{array}{cc} C_1 & 0 \end{array} \right] \\), where \\( C_1 \\) is an invertible \\( p \\) dimensional matrix. 
 2. Choose, 
     $$ P = R \left[ \begin{array}{cc} C_1^{-1} & 0 \\ 0 & I_{n-p} \end{array} \right] $$
     Now 
@@ -593,7 +595,7 @@ $$ \dot{w} =  -2 w + 4 u + -8 Z_1 $$
 
 The original state-space representation can be reconstructed using 
 
-$$ X = P Z = P \left[ \begin{array}{c} Z_1 \\ w + 5 Z_1 \end{array} \right]$$
+$$ X = P Z = P \left[ \begin{array}{c} Z_1 \\ w + 5 y \end{array} \right]$$
 
 
 
