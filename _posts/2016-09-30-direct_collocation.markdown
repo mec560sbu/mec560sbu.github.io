@@ -139,7 +139,7 @@ $$ \Delta_k = \dot{X}_c - f(X_c, u_c) $$
 
 $$ \Delta_k = - \frac{3}{2 h} \left( X_k - X_{k+1} \right) - \frac{1}{4} \left[ f(X_k,u_k) +  f(X_{k+1},u_{k+1})  \right]  - f(X_c, u_c) $$ 
 
-$$ \Delta_k = - \frac{3}{2 h} \left[  \left( X_k - X_{k+1} \right) + \frac{1}{6} \left[ f(X_k,u_k) + 4 f(X_c, u_c)+ f(X_{k+1},u_{k+1})  \right]  \right] $$ 
+$$ \Delta_k = - \frac{3}{2 h} \left[  \left( X_k - X_{k+1} \right) + \frac{h}{6} \left[ f(X_k,u_k) + 4 f(X_c, u_c)+ f(X_{k+1},u_{k+1})  \right]  \right] $$ 
 
 We redefine the state constraint as,
 

@@ -494,7 +494,7 @@ $$ \dot{X}_c = \dot{X} \left( \frac{h}{2} \right) =  - \frac{3}{2 h} \left( X_k 
 <h4 id="Defect,">Defect,<a class="anchor-link" href="#Defect,">&#182;</a></h4>$$ \Delta_k = \dot{X}_c - f(X_c, u_c) $$<p></p>
 $$ \Delta_k = - \frac{3}{2 h} \left[  \left( X_k - X_{k+1} \right) + \frac{1}{6} \left[ f(X_k,u_k) + 4 f(X_c, u_c)+ f(X_{k+1},u_{k+1})  \right]  \right] $$<p></p>
 <p>We redefine the constraint as,</p>
-$$ \Delta_k = \left[  \left( X_k - X_{k+1} \right) + \frac{1}{6} \left[ f(X_k,u_k) + 4 f(X_c, u_c)+ f(X_{k+1},u_{k+1})  \right]  \right] $$<p></p>
+$$ \Delta_k = \left[  \left( X_k - X_{k+1} \right) + \frac{h}{6} \left[ f(X_k,u_k) + 4 f(X_c, u_c)+ f(X_{k+1},u_{k+1})  \right]  \right] $$<p></p>
 <p>Term in bracket is integral from Hermite-Simpson approximation when the dynamic constraints are satisfied. This technique results in implicit Hermite-Simpson integration.</p>
 
 </div>
