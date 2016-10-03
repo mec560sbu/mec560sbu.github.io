@@ -537,7 +537,7 @@ Figures above show that the solution from GPOPS II is more accurate than the sol
 
 It is important to frame the nonlinear programming problem appropriately. An illposed over-constraint problem can result in poor convergence properties, below are some tips on designing a well-posed nonlinear program.
 
-1. Cost function: It is important to define cost functions that have smooth derivatives. This greatly simplifies the search space and makes slope calculations easier. If the cost function is not smooth, it can be made smooth by modifying the cost function. For example, \\( | x | \\) can be written as \\( \sqrt{X^2 + \epsilon } \\) or cost function can be expresses as \\( x \\) with the constraint that \\( x \geq 0 \\). 
+1. Cost function: It is important to define cost functions that have smooth derivatives. This greatly simplifies the search space and makes slope calculations easier. If the cost function is not smooth, it can be made smooth by modifying the cost function. For example, \\( abs( x ) \\) can be written as \\( \sqrt{X^2 + \epsilon } \\) or cost function can be expresses as \\( x \\) with the constraint that \\( x \geq 0 \\). 
 2. Initial guess: Initial guess is the most important user-specified input to optimization routines. A good initial guess puts the solver in region of global minima and avoids potentially getting stuck in local minimas. However, it is not always possible to compute a good initial guess. In most cases, the following tricks give a good initial guess,
     - Initialize states as linear functions between start and end
     - Solve the problem for a simpler kinematic model by completely ignoring the dynamics of the plant. 
