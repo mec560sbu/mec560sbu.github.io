@@ -541,7 +541,7 @@ It is important to frame the nonlinear programming problem appropriately. An ill
 2. Initial guess: Initial guess is the most important user-specified input to optimization routines. A good initial guess puts the solver in region of global minima and avoids potentially getting stuck in local minimas. However, it is not always possible to compute a good initial guess. In most cases, the following tricks give a good initial guess,
     - Initialize states as linear functions between start and end
     - Solve the problem for a simpler kinematic model by completely ignoring the dynamics of the plant. 
-    - Solve a simpler problem with simpler cost function first, and then use it as initial guess for the main problem. For example, power is a complex cost function \\( |u \dot{x}| \\), therefore instead a quadratic cost function can be defined first \\( u^2 \\), and the solution from this simpler problem can be used as initial guess in the next stage.
+    - Solve a simpler problem with simpler cost function first, and then use it as initial guess for the main problem. For example, power is a complex cost function \\( abs(u \dot{x}) \\), therefore instead a quadratic cost function can be defined first \\( u^2 \\), and the solution from this simpler problem can be used as initial guess in the next stage.
     - Solve optimization with a small grid size, and use this as input for finer or more advanced mesh types.
     - Solve optimization with fewer constraints first, and then solve the full problem with all the constraints included.
     - Use experimental data or domain knowledge to specify the initial guess. For example, in human reaching tasks, a minimum jerk trajectory can be a good initial guess for the optimizer.
