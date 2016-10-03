@@ -143,7 +143,7 @@ $$ \Delta_k = - \frac{3}{2 h} \left[  \left( X_k - X_{k+1} \right) + \frac{h}{6}
 
 We redefine the state constraint as,
 
-$$ \Delta_k = \left[  \left( X_k - X_{k+1} \right) + \frac{1}{6} \left[ f(X_k,u_k) + 4 f(X_c, u_c)+ f(X_{k+1},u_{k+1})  \right]  \right] $$ 
+$$ \Delta_k = \left[  \left( X_k - X_{k+1} \right) + \frac{h}{6} \left[ f(X_k,u_k) + 4 f(X_c, u_c)+ f(X_{k+1},u_{k+1})  \right]  \right] $$ 
 
 The last term in the expression above is implicit Hermite integration of system dynamics. We call this integration implicit because the last term in the bracket is equal to the Hermite integration only when the collocation point satisfies the system dynamics. 
 
@@ -188,7 +188,7 @@ $$ \underbrace{minimize}_{X_k,u_k} \left( \Phi(X_{N}) + \frac{1}{2}\sum_{k=1}^{N
 
 Subject to, 
 
-$$ \Delta_k = \left[  \left( X_k - X_{k+1} \right) + \frac{1}{6} \left[ f(X_k,u_k) + 4 f(X_c, u_c)+ f(X_{k+1},u_{k+1})  \right]  \right] = 0 $$ 
+$$ \Delta_k = \left[  \left( X_k - X_{k+1} \right) + \frac{h}{6} \left[ f(X_k,u_k) + 4 f(X_c, u_c)+ f(X_{k+1},u_{k+1})  \right]  \right] = 0 $$ 
 
 $$ u_{min} \leq u_k \leq u_{max},  $$ 
 

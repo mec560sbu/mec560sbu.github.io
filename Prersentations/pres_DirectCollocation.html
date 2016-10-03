@@ -492,7 +492,7 @@ $$ \dot{X}_c = \dot{X} \left( \frac{h}{2} \right) =  - \frac{3}{2 h} \left( X_k 
 <div class="text_cell_render border-box-sizing rendered_html">
 <h4 id="Control-at-midpoint-is,">Control at midpoint is,<a class="anchor-link" href="#Control-at-midpoint-is,">&#182;</a></h4>$$ u_c = \frac{u_k+u_{k+1}}{2} $$<p></p>
 <h4 id="Defect,">Defect,<a class="anchor-link" href="#Defect,">&#182;</a></h4>$$ \Delta_k = \dot{X}_c - f(X_c, u_c) $$<p></p>
-$$ \Delta_k = - \frac{3}{2 h} \left[  \left( X_k - X_{k+1} \right) + \frac{1}{6} \left[ f(X_k,u_k) + 4 f(X_c, u_c)+ f(X_{k+1},u_{k+1})  \right]  \right] $$<p></p>
+$$ \Delta_k = - \frac{3}{2 h} \left[  \left( X_k - X_{k+1} \right) + \frac{h}{6} \left[ f(X_k,u_k) + 4 f(X_c, u_c)+ f(X_{k+1},u_{k+1})  \right]  \right] $$<p></p>
 <p>We redefine the constraint as,</p>
 $$ \Delta_k = \left[  \left( X_k - X_{k+1} \right) + \frac{h}{6} \left[ f(X_k,u_k) + 4 f(X_c, u_c)+ f(X_{k+1},u_{k+1})  \right]  \right] $$<p></p>
 <p>Term in bracket is integral from Hermite-Simpson approximation when the dynamic constraints are satisfied. This technique results in implicit Hermite-Simpson integration.</p>
@@ -532,7 +532,7 @@ $$ C(X_k,u_k)\leq 0 ,  $$<p></p>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Problem-formulation:-Nonlinear-programming">Problem formulation: Nonlinear programming<a class="anchor-link" href="#Problem-formulation:-Nonlinear-programming">&#182;</a></h3>$$ \underbrace{minimize}_{X_k,u_k} \left( \Phi(X_{N}) + \frac{1}{2}\sum_{k=1}^{N-1} \left( X_{k+1}^T Q X_{k+1} + u_{k+1}^T R u_{k+1} +X_{k}^T Q X_{k} + u_{k}^T R u_{K+1} \right) h. \right) $$<p>Subject to,</p>
-$$ \Delta_k = \left[  \left( X_k - X_{k+1} \right) + \frac{1}{6} \left[ f(X_k,u_k) + 4 f(X_c, u_c)+ f(X_{k+1},u_{k+1})  \right]  \right] = 0 $$<p></p>
+$$ \Delta_k = \left[  \left( X_k - X_{k+1} \right) + \frac{h}{6} \left[ f(X_k,u_k) + 4 f(X_c, u_c)+ f(X_{k+1},u_{k+1})  \right]  \right] = 0 $$<p></p>
 $$ u_{min} \leq u_k \leq u_{max},  $$<p></p>
 $$ X_{min} \leq X_k \leq X_{max},  $$<p></p>
 $$ C{eq}(X_k,u_k) = 0 ,  $$<p></p>
