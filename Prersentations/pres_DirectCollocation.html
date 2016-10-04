@@ -506,7 +506,7 @@ $$ \Delta_k = \left[  \left( X_k - X_{k+1} \right) + \frac{h}{6} \left[ f(X_k,u_
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="3.-Express-cost-function-in-terms-of-optimization-parameters.">3. Express cost-function in terms of optimization parameters.<a class="anchor-link" href="#3.-Express-cost-function-in-terms-of-optimization-parameters.">&#182;</a></h3>$$ J(u) = \Phi(X_f) + \int_{t=0}^{t_f} L(t,X,u) dt . $$<p></p>
-<h4 id="Using-trapezoid-integration:">Using trapezoid integration:<a class="anchor-link" href="#Using-trapezoid-integration:">&#182;</a></h4>$$ J_{nlp} = \Phi(X_{N}) + \frac{1}{2}\sum_{k=1}^{N-1} \left( L(t_{k+1},X_{k+1},u_{k+1}) - L(t_k,X_k,u_k)  \right)(t_{k+1}-t_k) . $$<p></p>
+<h4 id="Using-trapezoid-integration:">Using trapezoid integration:<a class="anchor-link" href="#Using-trapezoid-integration:">&#182;</a></h4>$$ J_{nlp} = \Phi(X_{N}) + \frac{1}{2}\sum_{k=1}^{N-1} \left( L(t_{k+1},X_{k+1},u_{k+1}) + L(t_k,X_k,u_k)  \right)(t_{k+1}-t_k) . $$<p></p>
 <h4 id="For-linear-quadratic-regulator,-with-time-points-discretized-evenly-at-intervals-of-\(-h-\):">For linear quadratic regulator, with time points discretized evenly at intervals of \( h \):<a class="anchor-link" href="#For-linear-quadratic-regulator,-with-time-points-discretized-evenly-at-intervals-of-\(-h-\):">&#182;</a></h4>$$ J_{nlp} = \Phi(X_{N}) + \frac{1}{2}\sum_{k=1}^{N-1} \left( X_{k+1}^T Q X_{k+1} + u_{k+1}^T R u_{k+1} +X_{k}^T Q X_{k} + u_{k}^T R u_{K+1} \right) h. $$<p></p>
 
 </div>

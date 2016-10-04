@@ -23,6 +23,8 @@ All documents for the course page are available on course repository on [github]
 |      9/19/2016    |    Controllability and Observability, Controller/observer synthesis | [Controllability](https://mec560sbu.github.io/2016/09/19/Controllability/),[Control Synthesis](https://mec560sbu.github.io/2016/09/19/Control_synthesis/),[Slides: Controllability and Control synthesis](https://mec560sbu.github.io/Prersentations/pres_Controllability_and_Control.html#/),[Assignment 2](https://mec560sbu.github.io/Assignments2016/MEC560_Assignment2_DUE_10032016.html)                 | 
 |       |                       |            |
 |      9/26/2016    |    Optimal control, dynamic programming and multiple shooting | [ Optimal control, dynamic programming and multiple shooting](https://mec560sbu.github.io/2016/09/25/Opt_control/),[Slides Optimal control](https://mec560sbu.github.io/Prersentations/pres_OptControl.html#/)                 | 
+|      10/03/2016    |    Direct collocation for optimal control | [Direct collocation](https://mec560sbu.github.io/2016/09/30/direct_collocation/),[Slides Direct collocation](https://mec560sbu.github.io/Prersentations/pres_DirectCollocation.html#/)                 | 
+
 
 
 
