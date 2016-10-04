@@ -7,7 +7,7 @@ permalink: miniproject1
 
 
 
-## MEC 560: Mini-project I
+## Obstacle Avoidance for autonomous robot.
 ### Due: October 24, 2016. 
 
 
