@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Obstacle avoidance for autonomous robot
+title: MiniProject1
 date: 2016-06-08 22:22:22
 permalink: miniproject1
 ---
