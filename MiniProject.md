@@ -8,8 +8,7 @@ permalink: miniproject1
 
 
 ## Obstacle Avoidance for autonomous robot.
-### Due: October 24, 2016. 
-
+### Due: October 24, 2016 at 4 pm. NO LATE SUBMISSIONS ALLOWED
 
 
 #### Introductions: 
