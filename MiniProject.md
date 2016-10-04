@@ -47,6 +47,9 @@ Submit at least 5-6 page report that details how you solved the obstacle avoidan
 
 Projects that meet the above criteria and desmonstrate technical prowess will be featured on the course page.
 
+### Ethics statement:
+
+All the work presented for the mini-project should be your own. All the codes must be written by you. You may download codes from google drive, and modify them for your purpose. No code sharing or copying of work among students is allowed. If you are found copying or offering your material to other students, you will get a 0 on the mini-project. 
 
 
 
