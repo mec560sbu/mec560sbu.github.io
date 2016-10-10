@@ -390,7 +390,7 @@ xlabel('time')
 ```
 
 <div class='fig figcenter fighighlight'>
-  <img src="/images/output_4_0_2. png">
+  <img src="/images/output_4_0_2.png">
 </div>
 
 
