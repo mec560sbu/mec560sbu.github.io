@@ -1,14 +1,109 @@
 ---
 layout: post
 comments: true
-title:  "Observability and Observer design"
-excerpt: "Observability and full-order/reduced-order observer design for linear systems using pole-placement."
+title:  "Output feedback control, Observability and Observer design"
+excerpt: "Output feedback control, observability and full-order/reduced-order observer design for linear systems using pole-placement."
 date:   2016-10-01 11:00:00
 mathjax: true
 ---
 
 
 ### Vivek Yadav, PhD
+
+In many applications, we are more interested in driving the measurements of the system to some desired value. For example, while designing controller for walking robot, we are more interested in the hip velocity than the involved joint angles. Therefore, in such cases, we are more interested in designing a controller that drives the output of the system to a desired value, than the actual states themselves. The field of control theory that deals with modifying the behavior of the output of the system is referred as output feedback control theory. 
+
+
+Consider a system given by 
+
+$$ \frac{d x }{dt} = A x + B u $$
+
+with measurements 
+
+$$ y = C x. $$
+
+We design a controller \\( u = -Ky \\). The system dynamics becomes, 
+
+$$ \frac{d x }{dt} = (A  - BKC) X $$
+
+
+If we are able to choose a \\( K \\) such that the eigenvalues of \\( (A  - BKC) \\) have negative real parts, then we can design a controller that will drive the states of the system, and hence measurements to zero. However, depending on the values of the system dynamics and measurement matrices, this may not be possible. Consider the following example. 
+
+
+#### Motivating example: 
+
+Consider the system given by, 
+
+$$ \dot{X} = \left[ \begin{array}{cc} 0 & 1 \\ 0 & 0 \end{array} \right] X + \left[ \begin{array}{c} 0  \\ 1 \end{array} \right] u $$
+
+with measurement 
+
+$$  y = \left[ \begin{array}{cc} 1 & 0 \end{array} \right] X . $$
+
+and control 
+
+$$ u = -  y = - KCX $$
+
+where \\( K = 1 \\). The \\( (A  - BKC) \\) matrix in this case is, 
+
+$$ A-BKC =  \left[ \begin{array}{cc} 0 & 1 \\ 0 & 0 \end{array} \right]  - \left[ \begin{array}{c} 0  \\ 1 \end{array} \right] \times 1 \times  \left[ \begin{array}{cc} 1 & 0 \end{array} \right] = \left[ \begin{array}{cc} 0 & 1 \\ -1 & 0 \end{array} \right]$$ 
+
+The matrix above has eigen values at \\( \pm j \\), i.e real part zero. Therefore, the system above can not be stabilized using the control \\( u = -K y \\). This is also illustrated by the  example below, 
+
+
+
+```matlab
+%% Observer design example
+
+clc
+close all
+clear all 
+
+
+A = [0 1 ; 0 0]; 
+B = [0 ; 1];
+C = [1 0];
+
+X0 = [1;0];
+t = 0:0.01:10;
+
+K = 1;
+
+
+sys_OFC = @(t,X)[A*X - B*K*C*X]
+
+[t,X] = ode45(sys_OFC,t,X0);
+
+
+```
+
+    sys_OFC = 
+    
+        @(t,X)[A*X-B*K*C*X]
+
+
+
+```matlab
+figure;
+subplot(2,1,1)
+plot(t,X(:,1))
+title('States and observer estimates')
+ylabel('Position')
+subplot(2,1,2)
+plot(t,X(:,2))
+ylabel('Velocity')
+xlabel('time')
+```
+
+<div class='fig figcenter fighighlight'>
+  <img src="/images/output_2_0.png">
+</div>
+
+
+
+It can be shown that for all real-values of \\( K \\), the system has eigen values with zero real parts. Therefore, it is not possible to drive the states of the system to zero. However, we saw in earlier classes that the states could be sent to zero if velocity information is incorporated. Oberverbaility and observer design concepts can be used to extract various states of a system. In this example, velocity from position. 
+
+
+## Observability and observer design
 
 In previous classes we saw how to use pole-placement and optimal control techniques to design controllers for linear system under various constraints. One limitation of previous techniques was that we assumed that full-state information was available for us for design. However, we monitor a system using its measurements, and these measurements need not be the complete state vector. In most applications, the state vector is estimated based on measurements from the plant. This can be formally described as follows. Consider the system, 
 
