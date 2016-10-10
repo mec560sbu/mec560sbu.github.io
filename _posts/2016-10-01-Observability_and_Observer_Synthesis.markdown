@@ -41,7 +41,7 @@ $$  y = \left[ \begin{array}{cc} 1 & 0 \end{array} \right] X . $$
 
 and control 
 
-$$ u = -  y = - KCX $$
+$$ u = -  Ky = - KCX $$
 
 where \\( K = 1 \\). The \\( (A  - BKC) \\) matrix in this case is, 
 
