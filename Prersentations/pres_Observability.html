@@ -816,7 +816,7 @@ AADACwgkAADgBQQSAADwAgIJAAB44ReSGvTdkvlZvQAAAABJRU5ErkJggg==
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Observer">Observer<a class="anchor-link" href="#Observer">&#182;</a></h2>$$ \frac{d x }{dt} = A x + B u $$<p>with measurements</p>
-$$ y = C x + Bu. $$<h4 id="Observer-objective">Observer objective<a class="anchor-link" href="#Observer-objective">&#182;</a></h4><p>Obtain an estimate \( \hat{x} \) of the states \( x \) such that \( (x - \hat{x}) \) is as small as possible</p>
+$$ y = C x + Du. $$<h4 id="Observer-objective">Observer objective<a class="anchor-link" href="#Observer-objective">&#182;</a></h4><p>Obtain an estimate \( \hat{x} \) of the states \( x \) such that \( (x - \hat{x}) \) is as small as possible</p>
 
 </div>
 </div>
@@ -3589,7 +3589,7 @@ $$ e = X - \hat{X}. $$
 <p>Taking difference between observer and state estimate model gives,</p>
 $$ \dot{X} - \dot{\hat{X}} = (AX + Bu )  - (A\hat{X} + Bu + L (y- C \hat{X} - Du ))$$$$ \dot{e}  = (A - LC ) e $$<p>The state dynamics equation with control \( u = -K \hat{X} \) becomes,</p>
 $$ \dot{X} = AX + Bu =  AX - BK \hat{X} = (A - BK)X +BK e $$<p>Therefore, the complete observer-state system becomes,</p>
-$$ \left[\begin{array}{c} X \\ e\end{array}\right] = \left[\begin{array}{cc} (A - BK) & BK \\ 0 & (A - LC ) \end{array}\right] \left[\begin{array}{c} X \\ e\end{array}\right] $$<p>As the combined matrix is upper triangular, the poles of the state system have no effect on the poles of the observer system.</p>
+$$ \left[\begin{array}{c} \dot{X} \\ \dot{e}\end{array}\right] = \left[\begin{array}{cc} (A - BK) & BK \\ 0 & (A - LC ) \end{array}\right] \left[\begin{array}{c} X \\ e\end{array}\right] $$<p>As the combined matrix is upper triangular, the poles of the state system have no effect on the poles of the observer system.</p>
 
 </div>
 </div>
