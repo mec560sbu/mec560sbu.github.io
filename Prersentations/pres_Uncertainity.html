@@ -1907,6 +1907,45 @@ $$ p( e_1, e_2, \dots , e_N ) = \underbrace{\Pi}_{i=1~to~n} p(e_i| 0, \sigma^2) 
 
 </div>
 </div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Particle-filters">Particle filters<a class="anchor-link" href="#Particle-filters">&#182;</a></h2><ul>
+<li>Simulation based filters</li>
+<li>Generate several particles as possible locations of the robot</li>
+<li>Measure states for each particle, and weigh each particle by closeness to true measurement.</li>
+<li>Resample so particles with larger weight survive</li>
+</ul>
+<p><img src = "images/roulette.jpg"></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Particle-filter-for-localization">Particle filter for localization<a class="anchor-link" href="#Particle-filter-for-localization">&#182;</a></h2><p><img src = "images/Particlefilter2.gif" height = 100 width=500></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-matlab"><pre><span></span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
 </div></section></section>
 </div>
 </div>
