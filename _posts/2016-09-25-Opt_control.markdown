@@ -295,7 +295,7 @@ $$ J(u) = \frac{1}{2} \int_{t=0}^{\infty} (X^TQX + u^T R u) dt . $$
 
 In steady state condition, \\( \dot{P} = 0 \\). Therefore, the Riccati equation becomes,
 
-$$ 0  = PA + A^T P  - P B R^{-1}B^T P + Q X. $$
+$$ 0  = PA + A^T P  - P B R^{-1}B^T P + Q . $$
 
 The equation above is algebraic and is a quadratic matrix expression in \\( P \\). The solution to equation above can be obtained using MATLAB's 'care' function. Example below shows how to use MATLAB's 'care' function to calculate optimal gain values that minimize the cost function above. 
 
