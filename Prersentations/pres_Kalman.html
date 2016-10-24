@@ -386,7 +386,7 @@ $$ E(e_{Y,k+1} e_{Y,k+1}^T) = E((Ce_{k+1|k} + v_{k+1})(Ce_{k+1|k} + v_{k+1})^T) 
 <ul>
 <li>State update after measurement (same as observer update), </li>
 </ul>
-$$ \hat{X}_{k+1|k+1} =  \hat{X}_{k+1|k+1}+ K_{k+1}(Y_{k+1} - ( C \hat{X}_{k+1|k} + Du_{k+1}) )$$$$ \hat{X}_{k+1|k+1} =  \hat{X}_{k+1|k} + K_{k+1}e_{Y,k+1}$$$$ \hat{X}_{k+1|k+1} =  \hat{X}_{k+1|k} + K_{k+1}C e_{k+1|k} +K_{k+1}v_{k+1} $$<p>Choose a gain so the error between posterior state estimate  and actual state  is minimum.</p>
+$$ \hat{X}_{k+1|k+1} =  \hat{X}_{k+1|k}+ K_{k+1}(Y_{k+1} - ( C \hat{X}_{k+1|k} + Du_{k+1}) )$$$$ \hat{X}_{k+1|k+1} =  \hat{X}_{k+1|k} + K_{k+1}e_{Y,k+1}$$$$ \hat{X}_{k+1|k+1} =  \hat{X}_{k+1|k} + K_{k+1}C e_{k+1|k} +K_{k+1}v_{k+1} $$<p>Choose a gain so the error between posterior state estimate  and actual state  is minimum.</p>
 $$ X_{k+1}- \hat{X}_{k+1|k+1} = X_{k+1}-  \hat{X}_{k+1|k} - K_{k+1}C e_{k+1|k} -K_{k+1}v_{k+1} $$$$ e_{k+1|k+1} = (I - K_{k+1}C) e_{k+1|k} - K_{k+1} v_{k+1} $$
 </div>
 </div>
