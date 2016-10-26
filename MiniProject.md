@@ -10,6 +10,14 @@ permalink: miniproject1
 ## Obstacle Avoidance for autonomous robot.
 ### Due: October 24, 2016 at 4 pm. NO LATE SUBMISSIONS ALLOWED
 
+### The best submissions, 
+
+The [best solution was submitted by Courtney Armstrong](https://nbviewer.jupyter.org/github/mec560sbu/mec560sbu.github.io/blob/master/Assignments2016/MiniProject1_solution1/MiniProject1.ipynb), the link to download the accompanying MATLAB code can be found [here](https://drive.google.com/drive/folders/0B51BYOSh3EKQUTZGMjE1ZDgxbk0?usp=sharing). 
+
+Other good solutions, 
+1- By [Stephen Leo]
+2- By [Benjamin Bradwin]
+
 
 #### Introductions: 
 
