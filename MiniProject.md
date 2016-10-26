@@ -16,8 +16,8 @@ The [best solution was submitted by Courtney Armstrong](https://nbviewer.jupyter
 
 Other good solutions, 
 
-1- By [Stephen Leo](https://mec560sbu.github.io/Assignments2016/MiniProject1_solution1/BenjaminBen_Final_Project_Paper.pdf)
-2- By [Benjamin Bradwin]()
+1. By [Stephen Leo](https://mec560sbu.github.io/Assignments2016/MiniProject1_solution1/BenjaminBen_Final_Project_Paper.pdf)
+2. By [Benjamin Bradwin]()
 
 
 #### Introductions: 
