@@ -3,7 +3,7 @@ layout: post
 comments: true
 title:  "Kalman filter"
 excerpt: "Kalman filtering and estimation for linear systems."
-date:   2016-08-29 11:00:00
+date:   2016-10-29 11:00:00
 mathjax: true
 ---
 
