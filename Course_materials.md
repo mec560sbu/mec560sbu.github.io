@@ -25,9 +25,9 @@ All documents for the course page are available on course repository on [github]
 |      9/26/2016    |    Optimal control, dynamic programming and multiple shooting | [ Optimal control, dynamic programming and multiple shooting](https://mec560sbu.github.io/2016/09/25/Opt_control/),[Slides Optimal control](https://mec560sbu.github.io/Prersentations/pres_OptControl.html#/)                 | 
 |      10/03/2016    |    Direct collocation for optimal control | [Direct collocation](https://mec560sbu.github.io/2016/09/30/direct_collocation/),[Slides Direct collocation](https://mec560sbu.github.io/Prersentations/pres_DirectCollocation.html#/)                 | 
 |      10/10/2016    |    Output feedback control, observability and observer design | [Observability and observer design](https://mec560sbu.github.io/2016/10/01/Observability_and_Observer_Synthesis/),[Slides Observability](https://mec560sbu.github.io/Prersentations/pres_Observability.html#/)                 | 
-|      10/17/2016    |    Control and estimation under uncertainity | [Control and estimation under uncertainity](https://mec560sbu.github.io/2016/10/14/Uncertainity/),[Slides Uncertainity](https://mec560sbu.github.io/Prersentations/pres_Uncertainity.html#/)   
-|      10/24/2016    |    Kalman Filter | [Kalman Filter](https://mec560sbu.github.io/2016/10/29/KalmanFilter/),[Slides Kalman](https://mec560sbu.github.io/Prersentations/pres_Kalman.html#/) 
-| 10/31/2016         | MATLAB for simulation of dynamic systems | [Slides: MATLAB](https://mec560sbu.github.io/Prersentations/pres_MATLAB.html#/), [Assignment3, Due Nov 14, 2016](https://mec560sbu.github.io/Assignments2016/MEC560_Assignment3_DUE_11142016.html) 
+|      10/17/2016    |    Control and estimation under uncertainity | [Control and estimation under uncertainity](https://mec560sbu.github.io/2016/10/14/Uncertainity/),[Slides: Uncertainity](https://mec560sbu.github.io/Prersentations/pres_Uncertainity.html#/)   
+|      10/24/2016    |    Kalman Filter | [Kalman Filter](https://mec560sbu.github.io/2016/10/29/KalmanFilter/),[Slides: Kalman](https://mec560sbu.github.io/Prersentations/pres_Kalman.html#/) 
+| 10/31/2016         | MATLAB for simulation of dynamic systems | [Slides: MATLAB](https://mec560sbu.github.io/Prersentations/pres_MATLAB.html#/), [Assignment3: Due Nov 14, 2016](https://mec560sbu.github.io/Assignments2016/MEC560_Assignment3_DUE_11142016.html) 
 
 
 
