@@ -1,0 +1,85 @@
+params.g = 9.81;
+
+params.I_f_r = .01;
+params.m_f_r = .2;
+params.l_f_r = .3;
+params.lcm_f_r = .3/2;
+params.I_s_r = .01;
+params.m_s_r = 1;
+params.l_s_r = .8;
+params.lcm_s_r = .4;
+params.I_t_r = .01;
+params.m_t_r = 1.5;
+params.l_t_r = .8;
+params.lcm_t_r = .4;
+params.I_tr = .01;
+params.m_tr = 5;
+params.l_tr = 1;
+params.lcm_tr = .35;
+params.I_t_l = .01;
+params.m_t_l = 1.5;
+params.l_t_l = .8;
+params.lcm_t_l = .4;
+params.I_s_l = .01;
+params.m_s_l = 1;
+params.l_s_l = .8;
+params.lcm_s_l = .4;
+params.I_f_l = .01;
+params.m_f_l = .2;
+params.l_f_l = .3;
+params.lcm_f_l = .3/2;
+params.R_r = .5; 
+params.R_l = .5; 
+params.d_r = .1; 
+params.d_l = .1; 
+params.h_r = .2; 
+params.h_l = .2; 
+params.lcm_f_r_x = .05;
+params.lcm_f_r_y = .033;
+params.lcm_f_l_x = .05;
+params.lcm_f_l_y = .033;
+
+
+
+
+
+I_tr = params.I_tr;
+m_tr = params.m_tr;
+l_tr = params.l_tr;
+lcm_tr = params.lcm_tr;
+I_t_r = params.I_t_r;
+m_t_r = params.m_t_r;
+l_t_r = params.l_t_r;
+lcm_t_r = params.lcm_t_r;
+I_s_r = params.I_s_r;
+m_s_r = params.m_s_r;
+l_s_r = params.l_s_r;
+lcm_s_r = params.lcm_s_r;
+I_f_r = params.I_f_r;
+m_f_r = params.m_f_r;
+l_f_r = params.l_f_r;
+lcm_f_r = params.lcm_f_r;
+I_t_l = params.I_t_l;
+m_t_l = params.m_t_l;
+l_t_l = params.l_t_l;
+lcm_t_l = params.lcm_t_l;
+I_s_l = params.I_s_l;
+m_s_l = params.m_s_l;
+l_s_l = params.l_s_l;
+lcm_s_l = params.lcm_s_l;
+I_f_l = params.I_f_l;
+m_f_l = params.m_f_l;
+l_f_l = params.l_f_l;
+lcm_f_l = params.lcm_f_l;
+R_r = params.R_r; 
+R_l = params.R_l; 
+d_r = params.d_r; 
+d_l = params.d_l; 
+h_r = params.h_r; 
+h_l = params.h_l; 
+lcm_f_r_x = params.lcm_f_r_x; 
+lcm_f_r_y = params.lcm_f_r_y; 
+lcm_f_l_x = params.lcm_f_r_x; 
+lcm_f_l_y = params.lcm_f_l_y; 
+g = params.g; 
+
