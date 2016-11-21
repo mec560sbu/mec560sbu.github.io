@@ -3,7 +3,7 @@ layout: post
 comments: true
 title:  "Linearization: Nonlinear Dynamic Inversion, (input-output) Feedback Linearization and input-state linearization (SISO only)"
 excerpt: "Linearization: Nonlinear Dynamic Inversion, (input-output) Feedback Linearization and input-state linearization (SISO only)."
-date:   2016-10-01 11:00:00
+date:   2016-11-22 11:00:00
 mathjax: true
 ---
 
