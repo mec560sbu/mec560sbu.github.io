@@ -28,6 +28,8 @@ All documents for the course page are available on course repository on [github]
 |      10/17/2016    |    Control and estimation under uncertainity | [Control and estimation under uncertainity](https://mec560sbu.github.io/2016/10/14/Uncertainity/),[Slides: Uncertainity](https://mec560sbu.github.io/Prersentations/pres_Uncertainity.html#/)   
 |      10/24/2016    |    Kalman Filter | [Kalman Filter](https://mec560sbu.github.io/2016/10/29/KalmanFilter/),[Slides: Kalman](https://mec560sbu.github.io/Prersentations/pres_Kalman.html#/) 
 | 10/31/2016         | MATLAB for simulation of dynamic systems | [Slides: MATLAB](https://mec560sbu.github.io/Prersentations/pres_MATLAB.html#/), [Assignment3: Due Nov 14, 2016](https://mec560sbu.github.io/Assignments2016/MEC560_Assignment3_DUE_11142016.html) 
+| 11/06/2016         | Linear control technqiues for nonlinear systems | [Slides: Linear Control for Nonlinear systems](https://mec560sbu.github.io/Prersentations/pres_LinearControl_NonlinearSystem.html#/), [Linear control techniques for nonlinear systems](https://mec560sbu.github.io/2016/11/04/LinearControlForNonlinearSystems/) 
+| 11/14/2016         | Nonlinear systems and analysis | [Slides: Linear Control for Nonlinear systems](https://mec560sbu.github.io/Prersentations/pres_LinearControl_NonlinearSystem.html#/), [Lyapunov Method](https://mec560sbu.github.io/2016/11/22/Lyapunov_Methods/) 
 
 
 
