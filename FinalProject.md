@@ -5,7 +5,7 @@ date: 2016-06-08 22:22:22
 permalink: mec560-final-project
 ---
 
-
+## DUE DATE: DEC 15, 2016 (NO LATE SUBMISSIONS ACCEPTED)
 
 ### MEC 560: Advanced Control Systems
 
