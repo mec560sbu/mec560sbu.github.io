@@ -1,5 +1,11 @@
+---
+layout: page
+title: Final project 
+date: 2016-06-08 22:22:22
+permalink: mec560-final-project
+---
 
-## Final project 
+
 
 ### MEC 560: Advanced Control Systems
 
