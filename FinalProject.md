@@ -24,15 +24,15 @@ Your report should be organized as follows,
 5. Controller synthesis
     - Identify the control scheme you are using
     - Apply Lyapunov method to show that the controller is stable
-    - Clearly identify parameters of your controller and include discussion of 
+    - Clearly identify parameters of your controller
 6. Observer synthesis
     - Design kalman filter (EKF for nonlinear filter) 
     - Include discussion of if you can use observer with your controller model
     - If linear system, verify separation principle. 
 7. Simulation experiments 
     - Test model under atleast 4 different environmental conditions
-    - Test model under parametric undertainities 
-    - Identify conditions underwhich your controller will fail to achieve success on the desired task. 
+    - Test model under parametric uncertainities 
+    - Identify conditions under which your controller will fail to achieve success on the desired task. 
 8. Additional Notes
     - Include any additional findings.
 9. Course feedback
@@ -48,6 +48,3 @@ Your report should be organized as follows,
 
 
 
-```matlab
-
-```
