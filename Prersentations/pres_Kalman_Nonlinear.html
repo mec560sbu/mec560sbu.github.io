@@ -262,9 +262,22 @@ a.anchor-link {
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Overview">Overview<a class="anchor-link" href="#Overview">&#182;</a></h3><ul>
+<li>Observability of nonlinear systems</li>
 <li>EKF: Extended Kalman Filter for nonlinear system</li>
 <li>EKF vs UKF</li>
 </ul>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Observability-matrix">Observability matrix<a class="anchor-link" href="#Observability-matrix">&#182;</a></h3><p>Observability for nonlinear system \( \dot{X} = f(X) + g(X)u \) with measurement \( y = h(x) \) is given by</p>
+<p>is given by,</p>
+$$ O(f,h) = [ L^0_fh^T~ L^1_fh^T~ L^2_fh^T~ \dots ~ L^{n-1}_fh^T]  $$<p>If the observability matrix above has a full rank, then the states  of the system can be estimated. Note, observability matrix may lose rank in some state-space and could potentially become unobservable.</p>
 
 </div>
 </div>
@@ -342,32 +355,32 @@ $$ \theta_{k+1} = \theta_k + \delta t(\omega_k+w_\omega)   $$<p></p>
 <div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-matlab"><pre><span></span><span class="n">clc</span>
-<span class="n">close</span> <span class="n">all</span>
-<span class="n">clear</span> <span class="n">all</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">clc</span>
+<span class="n">close</span> <span class="nb">all</span>
+<span class="n">clear</span> <span class="nb">all</span>
 
 
-<span class="n">dt</span> <span class="p">=</span> <span class="mf">0.001</span><span class="p">;</span>
-<span class="n">v</span> <span class="p">=</span> <span class="p">.</span><span class="mi">5</span><span class="p">;</span>
-<span class="n">head_ang</span> <span class="p">=</span> <span class="nb">pi</span><span class="o">/</span><span class="mi">4</span><span class="p">;</span>
+<span class="n">dt</span> <span class="o">=</span> <span class="mf">0.001</span><span class="p">;</span>
+<span class="n">v</span> <span class="o">=</span> <span class="o">.</span><span class="mi">5</span><span class="p">;</span>
+<span class="n">head_ang</span> <span class="o">=</span> <span class="n">pi</span><span class="o">/</span><span class="mi">4</span><span class="p">;</span>
 
 
-<span class="n">C</span> <span class="p">=</span> <span class="p">[</span><span class="mi">1</span> <span class="mi">0</span> <span class="mi">0</span><span class="p">;</span>
+<span class="n">C</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span> <span class="mi">0</span> <span class="mi">0</span><span class="p">;</span>
     <span class="mi">0</span> <span class="mi">1</span> <span class="mi">0</span><span class="p">];</span>
-<span class="n">R</span> <span class="p">=</span> <span class="nb">diag</span><span class="p">([.</span><span class="mi">001</span> <span class="p">.</span><span class="mi">001</span><span class="p">]);</span>
+<span class="n">R</span> <span class="o">=</span> <span class="n">diag</span><span class="p">([</span><span class="o">.</span><span class="mo">001</span> <span class="o">.</span><span class="mo">001</span><span class="p">]);</span>
 
-<span class="n">Q</span> <span class="p">=</span> <span class="nb">diag</span><span class="p">([.</span><span class="mi">1</span> <span class="p">.</span><span class="mi">01</span><span class="p">]);</span>
-<span class="n">P_pl</span> <span class="p">=</span> <span class="nb">eye</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span>
+<span class="n">Q</span> <span class="o">=</span> <span class="n">diag</span><span class="p">([</span><span class="o">.</span><span class="mi">1</span> <span class="o">.</span><span class="mo">01</span><span class="p">]);</span>
+<span class="n">P_pl</span> <span class="o">=</span> <span class="n">eye</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span>
 
-<span class="n">X_hat_0</span> <span class="p">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">;</span><span class="mi">0</span><span class="p">;</span><span class="mi">0</span><span class="p">];</span>
-<span class="n">X_0</span> <span class="p">=</span> <span class="p">[.</span><span class="mi">1</span><span class="p">;.</span><span class="mi">1</span><span class="p">;</span><span class="n">head_ang</span><span class="p">];</span>
-<span class="n">X_hat_0</span> <span class="p">=</span> <span class="n">X_0</span><span class="o">/</span><span class="mi">2</span><span class="p">;</span>
+<span class="n">X_hat_0</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">;</span><span class="mi">0</span><span class="p">;</span><span class="mi">0</span><span class="p">];</span>
+<span class="n">X_0</span> <span class="o">=</span> <span class="p">[</span><span class="o">.</span><span class="mi">1</span><span class="p">;</span><span class="o">.</span><span class="mi">1</span><span class="p">;</span><span class="n">head_ang</span><span class="p">];</span>
+<span class="n">X_hat_0</span> <span class="o">=</span> <span class="n">X_0</span><span class="o">/</span><span class="mi">2</span><span class="p">;</span>
 
 
-<span class="n">X</span><span class="p">(:,</span><span class="mi">1</span><span class="p">)=</span> <span class="n">X_0</span><span class="p">;</span>
-<span class="n">Y</span><span class="p">(:,</span><span class="mi">1</span><span class="p">)</span> <span class="p">=</span> <span class="n">C</span><span class="o">*</span><span class="n">X</span><span class="p">(:,</span><span class="mi">1</span><span class="p">);</span>
-<span class="n">t</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="p">=</span> <span class="mi">0</span><span class="p">;</span>
-<span class="n">X_hat</span><span class="p">(:,</span><span class="mi">1</span><span class="p">)=</span> <span class="n">X_hat_0</span><span class="p">;</span>
+<span class="n">X</span><span class="p">(:,</span><span class="mi">1</span><span class="p">)</span><span class="o">=</span> <span class="n">X_0</span><span class="p">;</span>
+<span class="n">Y</span><span class="p">(:,</span><span class="mi">1</span><span class="p">)</span> <span class="o">=</span> <span class="n">C</span><span class="o">*</span><span class="n">X</span><span class="p">(:,</span><span class="mi">1</span><span class="p">);</span>
+<span class="n">t</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="n">X_hat</span><span class="p">(:,</span><span class="mi">1</span><span class="p">)</span><span class="o">=</span> <span class="n">X_hat_0</span><span class="p">;</span>
 </pre></div>
 
 </div>
@@ -380,39 +393,40 @@ $$ \theta_{k+1} = \theta_k + \delta t(\omega_k+w_\omega)   $$<p></p>
 <div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-matlab"><pre><span></span><span class="k">for</span> <span class="nb">i</span> <span class="p">=</span> <span class="mi">1</span><span class="p">:</span><span class="mi">4000</span>
-    <span class="n">u</span> <span class="p">=</span> <span class="p">[.</span><span class="mi">5</span><span class="p">;</span><span class="mi">0</span><span class="p">];</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">:</span><span class="mi">4000</span>
+    <span class="n">u</span> <span class="o">=</span> <span class="p">[</span><span class="o">.</span><span class="mi">5</span><span class="p">;</span><span class="mi">0</span><span class="p">];</span>
         
-    <span class="n">t</span><span class="p">(</span><span class="nb">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="p">=</span> <span class="n">t</span><span class="p">(</span><span class="nb">i</span><span class="p">)</span><span class="o">+</span><span class="n">dt</span><span class="p">;</span>
-    <span class="c">% True process</span>
-    <span class="n">X</span><span class="p">(:,</span><span class="nb">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)=</span> <span class="n">X</span><span class="p">(:,</span><span class="nb">i</span><span class="p">)</span> <span class="o">+</span> <span class="n">dt</span><span class="o">*</span><span class="p">[</span><span class="n">u</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="nb">cos</span><span class="p">(</span><span class="n">X</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="nb">i</span><span class="p">));</span>
-        <span class="n">u</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="nb">sin</span><span class="p">(</span><span class="n">X</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="nb">i</span><span class="p">));</span>
+    <span class="n">t</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="o">=</span> <span class="n">t</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">+</span><span class="n">dt</span><span class="p">;</span>
+    <span class="o">%</span> <span class="bp">True</span> <span class="n">process</span>
+    <span class="n">X</span><span class="p">(:,</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">=</span> <span class="n">X</span><span class="p">(:,</span><span class="n">i</span><span class="p">)</span> <span class="o">+</span> <span class="n">dt</span><span class="o">*</span><span class="p">[</span><span class="n">u</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">cos</span><span class="p">(</span><span class="n">X</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="n">i</span><span class="p">));</span>
+        <span class="n">u</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">sin</span><span class="p">(</span><span class="n">X</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="n">i</span><span class="p">));</span>
         <span class="n">u</span><span class="p">(</span><span class="mi">2</span><span class="p">);];</span>
-    <span class="n">Y</span><span class="p">(:,</span><span class="nb">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="p">=</span> <span class="n">C</span><span class="o">*</span><span class="n">X</span><span class="p">(:,</span><span class="nb">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="nb">sqrt</span><span class="p">(</span><span class="n">R</span><span class="p">)</span><span class="o">*</span><span class="nb">randn</span><span class="p">(</span><span class="nb">size</span><span class="p">(</span><span class="n">C</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span><span class="mi">1</span><span class="p">);</span>  <span class="c">%*randn(2,1);</span>
-    <span class="c">% Observer model</span>
+    <span class="n">Y</span><span class="p">(:,</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="o">=</span> <span class="n">C</span><span class="o">*</span><span class="n">X</span><span class="p">(:,</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="n">sqrt</span><span class="p">(</span><span class="n">R</span><span class="p">)</span><span class="o">*</span><span class="n">randn</span><span class="p">(</span><span class="n">size</span><span class="p">(</span><span class="n">C</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span><span class="mi">1</span><span class="p">);</span>  <span class="o">%*</span><span class="n">randn</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">);</span>
+    <span class="o">%</span> <span class="n">Observer</span> <span class="n">model</span>
         
-    <span class="n">dFdx</span> <span class="p">=</span> <span class="p">[</span><span class="mi">0</span> <span class="mi">0</span> <span class="o">-</span><span class="n">v</span><span class="o">*</span><span class="nb">sin</span><span class="p">(</span><span class="n">X_hat</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="nb">i</span><span class="p">));</span> <span class="mi">0</span> <span class="mi">0</span> <span class="n">v</span><span class="o">*</span><span class="nb">cos</span><span class="p">(</span><span class="n">X_hat</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="nb">i</span><span class="p">));</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">0</span> <span class="p">];</span>
-    <span class="n">dFdx_d</span> <span class="p">=</span> <span class="nb">eye</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="o">+</span> <span class="n">dt</span><span class="o">*</span><span class="n">dFdx</span><span class="p">;</span>
+    <span class="n">dFdx</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span> <span class="mi">0</span> <span class="o">-</span><span class="n">v</span><span class="o">*</span><span class="n">sin</span><span class="p">(</span><span class="n">X_hat</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="n">i</span><span class="p">));</span> <span class="mi">0</span> <span class="mi">0</span> <span class="n">v</span><span class="o">*</span><span class="n">cos</span><span class="p">(</span><span class="n">X_hat</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="n">i</span><span class="p">));</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">0</span> <span class="p">];</span>
+    <span class="n">dFdx_d</span> <span class="o">=</span> <span class="n">eye</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="o">+</span> <span class="n">dt</span><span class="o">*</span><span class="n">dFdx</span><span class="p">;</span>
     
-    <span class="n">F</span> <span class="p">=</span> <span class="p">[</span><span class="n">dt</span><span class="o">*</span><span class="nb">cos</span><span class="p">(</span><span class="n">X_hat</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="nb">i</span><span class="p">))</span> <span class="mi">0</span><span class="p">;</span>
-    <span class="n">dt</span><span class="o">*</span><span class="nb">sin</span><span class="p">(</span><span class="n">X_hat</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="nb">i</span><span class="p">))</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="n">F</span> <span class="o">=</span> <span class="p">[</span><span class="n">dt</span><span class="o">*</span><span class="n">cos</span><span class="p">(</span><span class="n">X_hat</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="n">i</span><span class="p">))</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="n">dt</span><span class="o">*</span><span class="n">sin</span><span class="p">(</span><span class="n">X_hat</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="n">i</span><span class="p">))</span> <span class="mi">0</span><span class="p">;</span>
     <span class="mi">0</span> <span class="n">dt</span><span class="p">];</span>
     
-    <span class="n">P_mi</span> <span class="p">=</span> <span class="n">dFdx_d</span><span class="o">*</span><span class="n">P_pl</span><span class="o">*</span><span class="n">dFdx_d</span><span class="o">&#39;</span> <span class="o">+</span> <span class="n">F</span><span class="o">*</span><span class="n">Q</span><span class="o">*</span><span class="n">F</span><span class="o">&#39;</span><span class="p">;</span>
+    <span class="n">P_mi</span> <span class="o">=</span> <span class="n">dFdx_d</span><span class="o">*</span><span class="n">P_pl</span><span class="o">*</span><span class="n">dFdx_d</span><span class="s1">&#39; + F*Q*F&#39;</span><span class="p">;</span>
        
-    <span class="n">X_hat</span><span class="p">(:,</span><span class="nb">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="p">=</span> <span class="n">X_hat</span><span class="p">(:,</span><span class="nb">i</span><span class="p">)</span> <span class="o">+</span> <span class="n">dt</span><span class="o">*</span><span class="p">[</span><span class="n">u</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="nb">cos</span><span class="p">(</span><span class="n">X_hat</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="nb">i</span><span class="p">));</span>
-            <span class="n">u</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="nb">sin</span><span class="p">(</span><span class="n">X_hat</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="nb">i</span><span class="p">));</span>
+    <span class="n">X_hat</span><span class="p">(:,</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="o">=</span> <span class="n">X_hat</span><span class="p">(:,</span><span class="n">i</span><span class="p">)</span> <span class="o">+</span> <span class="n">dt</span><span class="o">*</span><span class="p">[</span><span class="n">u</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">cos</span><span class="p">(</span><span class="n">X_hat</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="n">i</span><span class="p">));</span>
+            <span class="n">u</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">sin</span><span class="p">(</span><span class="n">X_hat</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="n">i</span><span class="p">));</span>
           <span class="n">u</span><span class="p">(</span><span class="mi">2</span><span class="p">);];</span>
-    <span class="n">Y_hat</span><span class="p">(:,</span><span class="nb">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="p">=</span> <span class="n">C</span><span class="o">*</span><span class="n">X_hat</span><span class="p">(:,</span><span class="nb">i</span><span class="o">+</span><span class="mi">1</span><span class="p">);</span>
-    <span class="c">% Update based on measurement</span>
-    <span class="n">e_Y</span>  <span class="p">=</span> <span class="n">Y</span><span class="p">(:,</span><span class="nb">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="o">-</span> <span class="n">Y_hat</span><span class="p">(:,</span><span class="nb">i</span><span class="o">+</span><span class="mi">1</span><span class="p">);</span>
-    <span class="n">S</span> <span class="p">=</span> <span class="n">C</span><span class="o">*</span><span class="n">P_mi</span><span class="o">*</span><span class="n">C</span><span class="o">&#39;+</span><span class="n">R</span><span class="p">;</span>
-    <span class="n">K</span> <span class="p">=</span> <span class="n">P_mi</span><span class="o">*</span><span class="n">C</span><span class="o">&#39;*</span><span class="n">inv</span><span class="p">(</span><span class="n">S</span><span class="p">);</span>
-    <span class="n">P_pl</span> <span class="p">=</span> <span class="p">(</span><span class="nb">eye</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="o">-</span> <span class="n">K</span><span class="o">*</span><span class="n">C</span><span class="p">)</span><span class="o">*</span><span class="n">P_mi</span><span class="p">;</span>
-    <span class="n">X_hat</span><span class="p">(:,</span><span class="nb">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)=</span><span class="n">X_hat</span><span class="p">(:,</span><span class="nb">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="n">K</span><span class="o">*</span><span class="n">e_Y</span><span class="p">;</span>
-<span class="k">end</span>
-<span class="n">X_hat</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span> <span class="p">=</span> <span class="n">X_hat</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="k">end</span><span class="p">);</span>
-<span class="n">P_pl</span> <span class="p">=</span> <span class="n">P_mi</span><span class="p">;</span>
+    <span class="n">Y_hat</span><span class="p">(:,</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="o">=</span> <span class="n">C</span><span class="o">*</span><span class="n">X_hat</span><span class="p">(:,</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">);</span>
+    <span class="o">%</span> <span class="n">Update</span> <span class="n">based</span> <span class="n">on</span> <span class="n">measurement</span>
+    <span class="n">e_Y</span>  <span class="o">=</span> <span class="n">Y</span><span class="p">(:,</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="o">-</span> <span class="n">Y_hat</span><span class="p">(:,</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">);</span>
+    <span class="n">S</span> <span class="o">=</span> <span class="n">C</span><span class="o">*</span><span class="n">P_mi</span><span class="o">*</span><span class="n">C</span><span class="s1">&#39;+R;</span>
+    <span class="n">K</span> <span class="o">=</span> <span class="n">P_mi</span><span class="o">*</span><span class="n">C</span><span class="s1">&#39;*inv(S);</span>
+    <span class="n">P_pl</span> <span class="o">=</span> <span class="p">(</span><span class="n">eye</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="o">-</span> <span class="n">K</span><span class="o">*</span><span class="n">C</span><span class="p">)</span><span class="o">*</span><span class="n">P_mi</span><span class="p">;</span>
+    <span class="n">X_hat</span><span class="p">(:,</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">=</span><span class="n">X_hat</span><span class="p">(:,</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="n">K</span><span class="o">*</span><span class="n">e_Y</span><span class="p">;</span>
+<span class="n">end</span>
+<span class="n">X_hat</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span> <span class="o">=</span> <span class="n">X_hat</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="n">end</span><span class="p">);</span>
+<span class="n">P_pl</span> <span class="o">=</span> <span class="n">P_mi</span><span class="p">;</span>
+    
 </pre></div>
 
 </div>
@@ -425,19 +439,19 @@ $$ \theta_{k+1} = \theta_k + \delta t(\omega_k+w_\omega)   $$<p></p>
 <div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-matlab"><pre><span></span><span class="n">figure</span><span class="p">;</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">figure</span><span class="p">;</span>
 <span class="n">subplot</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">X</span><span class="p">(</span><span class="mi">1</span><span class="p">,:),</span><span class="n">t</span><span class="p">,</span><span class="n">X_hat</span><span class="p">(</span><span class="mi">1</span><span class="p">,:),</span><span class="s">&#39;--&#39;</span><span class="p">)</span>
-<span class="n">legend</span><span class="p">(</span><span class="s">&#39;true&#39;</span><span class="p">,</span><span class="s">&#39;estimate&#39;</span><span class="p">)</span>
-<span class="c">%axis([0 2.5 0 40])</span>
-<span class="n">xlabel</span><span class="p">(</span><span class="s">&#39;time&#39;</span><span class="p">)</span>
-<span class="n">ylabel</span><span class="p">(</span><span class="s">&#39;X&#39;</span><span class="p">)</span>
+<span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">X</span><span class="p">(</span><span class="mi">1</span><span class="p">,:),</span><span class="n">t</span><span class="p">,</span><span class="n">X_hat</span><span class="p">(</span><span class="mi">1</span><span class="p">,:),</span><span class="s1">&#39;--&#39;</span><span class="p">)</span>
+<span class="n">legend</span><span class="p">(</span><span class="s1">&#39;true&#39;</span><span class="p">,</span><span class="s1">&#39;estimate&#39;</span><span class="p">)</span>
+<span class="o">%</span><span class="k">axis</span>([0 2.5 0 40])
+<span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;time&#39;</span><span class="p">)</span>
+<span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;X&#39;</span><span class="p">)</span>
 <span class="n">axis</span><span class="p">([</span><span class="mi">0</span> <span class="mi">4</span> <span class="mi">0</span> <span class="mi">2</span><span class="p">])</span>
 <span class="n">subplot</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
-<span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">X</span><span class="p">(</span><span class="mi">2</span><span class="p">,:),</span><span class="n">t</span><span class="p">,</span><span class="n">X_hat</span><span class="p">(</span><span class="mi">2</span><span class="p">,:),</span><span class="s">&#39;--&#39;</span><span class="p">)</span>
-<span class="n">legend</span><span class="p">(</span><span class="s">&#39;true&#39;</span><span class="p">,</span><span class="s">&#39;estimate&#39;</span><span class="p">)</span>
-<span class="n">xlabel</span><span class="p">(</span><span class="s">&#39;time&#39;</span><span class="p">)</span>
-<span class="n">ylabel</span><span class="p">(</span><span class="s">&#39;Y&#39;</span><span class="p">)</span>
+<span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">X</span><span class="p">(</span><span class="mi">2</span><span class="p">,:),</span><span class="n">t</span><span class="p">,</span><span class="n">X_hat</span><span class="p">(</span><span class="mi">2</span><span class="p">,:),</span><span class="s1">&#39;--&#39;</span><span class="p">)</span>
+<span class="n">legend</span><span class="p">(</span><span class="s1">&#39;true&#39;</span><span class="p">,</span><span class="s1">&#39;estimate&#39;</span><span class="p">)</span>
+<span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;time&#39;</span><span class="p">)</span>
+<span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Y&#39;</span><span class="p">)</span>
 <span class="n">axis</span><span class="p">([</span><span class="mi">0</span> <span class="mi">4</span> <span class="mi">0</span> <span class="mi">2</span><span class="p">])</span>
 </pre></div>
 
@@ -783,12 +797,12 @@ EVBIAADACP8faee7rBbpnA4AAAAASUVORK5CYII=
 <div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-matlab"><pre><span></span><span class="n">figure</span><span class="p">;</span>
-<span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">X</span><span class="p">(</span><span class="mi">3</span><span class="p">,:),</span><span class="n">t</span><span class="p">,</span><span class="n">X_hat</span><span class="p">(</span><span class="mi">3</span><span class="p">,:),</span><span class="s">&#39;--&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">figure</span><span class="p">;</span>
+<span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">X</span><span class="p">(</span><span class="mi">3</span><span class="p">,:),</span><span class="n">t</span><span class="p">,</span><span class="n">X_hat</span><span class="p">(</span><span class="mi">3</span><span class="p">,:),</span><span class="s1">&#39;--&#39;</span><span class="p">)</span>
 <span class="n">axis</span><span class="p">([</span><span class="mi">0</span> <span class="mi">4</span> <span class="mi">0</span> <span class="mi">1</span><span class="p">])</span>
-<span class="n">xlabel</span><span class="p">(</span><span class="s">&#39;time&#39;</span><span class="p">)</span>
-<span class="n">ylabel</span><span class="p">(</span><span class="s">&#39;Theta&#39;</span><span class="p">)</span>
-<span class="c">%axis([0 2.5 0 2])</span>
+<span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;time&#39;</span><span class="p">)</span>
+<span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Theta&#39;</span><span class="p">)</span>
+<span class="o">%</span><span class="k">axis</span>([0 2.5 0 2])
 </pre></div>
 
 </div>
@@ -1076,7 +1090,7 @@ k+rwIQQSAEAR+P0FAFAEAgkAoAgEEgBAEf4/xfoQ4qvGKPIAAAAASUVORK5CYII=
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-matlab"><pre><span></span>
+<div class=" highlight hl-ipython2"><pre><span></span> 
 </pre></div>
 
 </div>
