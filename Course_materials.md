@@ -32,7 +32,7 @@ All documents for the course page are available on course repository on [github]
 | 11/14/2016         | Nonlinear systems and analysis | [Slides: Nonlinear system analysis](file:///Users/vivekyadav/Desktop/MEC560/mec560sbu.github.io/Prersentations/pres_Nonlinear.html#/), [Slides: Nonlinear control introduction](file:///Users/vivekyadav/Desktop/MEC560/mec560sbu.github.io/Prersentations/pres_nonlinear_control.html#/), [Lyapunov Method](https://mec560sbu.github.io/2016/11/22/Lyapunov_Methods/) 
 | 11/21/2016         | Linearization and backstepping | [Slides: Linearization](https://mec560sbu.github.io/Prersentations/pres_Linearization.html#/), [Slides: Backstepping](https://mec560sbu.github.io/Prersentations/pres_backstepping.html#/)
 | 11/28/2016         | Sliding Mode and Adaptive control | [Slides: Sliding Mode](https://mec560sbu.github.io/Prersentations/pres_SlidingMode.html#/), [Slides: Adaptive control](https://mec560sbu.github.io/Prersentations/pres_adaptive.html#/)
-| 12/05/2016         | Wheeled robot and Kalman filter | [Slides: Wheeled robot](https://mec560sbu.github.io/Prersentations/pres_wheel_robot.html#/), [Slides: Backstepping](https://mec560sbu.github.io/Prersentations/pres_Kalman_Nonlinear.html#/)
+| 12/05/2016         | Wheeled robot and Kalman filter | [Slides: Wheeled robot](https://mec560sbu.github.io/Prersentations/pres_wheel_robot.html#/), [Slides: Nonlinear Kalman](https://mec560sbu.github.io/Prersentations/pres_Kalman_Nonlinear.html#/)
 
 
 
