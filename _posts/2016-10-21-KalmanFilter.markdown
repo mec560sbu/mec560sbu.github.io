@@ -36,7 +36,7 @@ System dynamics are given by,
 
 $$ X_{k+1} = AX_{k} + Bu_{k} + F w_{k} $$
 
-To separate the state estimates before and after measurement, we define, \\( X_{k|k} \\) as estimate after measurement at step \\( k \\).
+To separate the state estimates before and after measurement, we define, $ X_{k|k} $ as estimate after measurement at step $ k $.
 
 \\( X_{k+1|k} \\) is the state estimate after following system dynamics. Therefore the expected future value of the state are given by, 
 
