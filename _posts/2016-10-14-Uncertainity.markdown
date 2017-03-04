@@ -571,7 +571,13 @@ Particle filters are a class of simulation-based filter, unlike model-based. In 
   <img src="/images/roulette.jpg">
 </div>
 
-Animation below presents implementation of particle-filter for a simple 2D SLAM. 
+Animation below presents implementation of particle-filter for a simple 2D SLAM for cases where sensor noise is high and low.
+
+
+<div class='fig figcenter fighighlight'>
+  <img src="/images/ParticleFilter.gif">
+</div>
+
 
 <div class='fig figcenter fighighlight'>
   <img src="/images/ParticleFilter2.gif">
