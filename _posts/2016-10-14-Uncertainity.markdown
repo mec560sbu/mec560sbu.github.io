@@ -64,7 +64,10 @@ We will look at 2 approaches to control of systems with uncertainity. The first 
 We will first look into Kalman filtering, and extend the idea for optimal control for systems with undertainities. Kalman filters combine information about system dynamics and previous measurements to estimate the current states of the system, and typically perform better than having either system dynamics or measurements alone. This is illustrated by an example, consider estimating the position of a car moving along a straight line with a constant velocity. There may be errors in orientation of the steering, difference between actual and desired velocity of the car, and in measurements obtained from the car. These errors introduce ambiguity in location of the car. If we assume the position and velocity of the car to follow a gaussian process, we can identify the region in which we expect the car to be. This is illustrated by the example below, 
 
 
-<img src = "kalman_filter.gif">
+<div class='fig figcenter fighighlight'>
+<img src = "/images/kalman_filter.gif">
+</div>
+
 
 The position estimate of the car is given by the red cloud. We know approximate position and velocity at the start, as the car moves, errors are introduced due to to inaccruarate speed tracking, steering angle errors, actuation errors, etc all of which reduce our confidence in accurately locating the car and add to uncertainity. Therefore, as the car moves, the possible region where the car could be increases. However, once we get the position measurement, we can update the location of the car. However, the measurement itself is not accurate, and has some uncertainity associated with it. Therefore, the location of the car can only be estimated within a given region. 
 
