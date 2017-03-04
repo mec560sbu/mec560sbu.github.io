@@ -114,6 +114,7 @@ $$ e_{k+1|k+1} = (I - K_{k+1}C) e_{k+1|k} - K_{k+1} v_{k+1} $$
 Therefore, the posterior covariance becomes 
 
 $$ P_{k+1|k+1} = E( e_{k+1|k+1} e_{k+1|k+1}^T ) $$
+
 $$= E \left( ( (I - K_{k+1}C) e_{k+1|k} - K_{k+1} v_{k+1} ) ( (I - K_{k+1}C) e_{k+1|k} - K_{k+1}v_{k+1} ) ^T \right)$$
 
 
