@@ -336,7 +336,7 @@ $$ f(X| \mu_2, \sigma_2^2) = \frac{1}{\sqrt{2 \pi \sigma_2^2}} e^{ - \frac{(X-\m
 
 The Bayesian probability is given by, 
 
-$$ f((X| \mu_1, \sigma_1^2)|(X| \mu_2, \sigma_2^2))  = \frac{f(X| \mu_2, \sigma_2^2) f(X| \mu_2, \sigma_2^2)}{\int_{-\infty}^{\infty}f(X| \mu_2, \sigma_2^2) f(X| \mu_2, \sigma_2^2)dX}$$ 
+$$ f((X| \mu_1, \sigma_1^2)|(X| \mu_2, \sigma_2^2))  = \frac{f(X| \mu_1, \sigma_1^2) f(X| \mu_2, \sigma_2^2)}{\int_{-\infty}^{\infty}f(X| \mu_1, \sigma_1^2) f(X| \mu_2, \sigma_2^2)dX}$$ 
 
 
 
